@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona dashboard</title>
+
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=IBM+Plex+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <link href="/css/c3.min.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="js/d3.v5.min.js"></script>
+  <script src="js/c3.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <section id="intro">
+      <h2 id="intro-heading">Corona Impact Analysis</h2>
+      <div id="intro-text">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+      </div>
+    </section>
+    
+    <section id="dashboard">
+
+      <div class="row">
+        <div id="chart-1" class="chart"></div>
+        <div id="chart-2" class="chart"></div>
+      </div>
+
+      <div class="row">
+        <div id="chart-3" class="chart"></div>
+        <div id="chart-4" class="chart"></div>
+      </div>
+
+      <div class="controls">
+        <div>
+          <label for="ps">Policy Strength</label>
+          <input type="range" id="pc" name="ps" min="0" max="100" value="30">
+          <label id="slider-1-value"></label>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+</html>

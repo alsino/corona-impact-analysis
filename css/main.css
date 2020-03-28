@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #565656;
+}
+
+section{
+  margin-bottom: 2em;
+}
+
+#wrapper {
+  margin: 2em 6em 0 6em;
+}
+
+#intro-text {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+label {
+  font-size: 11px;
+  font-family: 'IBM Plex Mono';
+}
+
+#dashboard {
+} 
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.controls {
+  margin-top: 2em;
+}
+
+
+
+
+.chart {
+  /* margin: 0 30px 0 30px; */
+}
+
+
+.chart .c3-grid .c3-xgrid-focus {
+  visibility : hidden !important;
+}
+
+.c3 svg, .c3-legend-item  {
+  font-family: 'IBM Plex Mono';
+  font-size: 11px !important;
+}
+
+.chart .c3-legend-item-tile {
+  stroke-width: 2px;
+}
+
+.chart-line .c3-legend-item-Umland .chart-line .c3-legend-item-tile, .chart-line .c3-legend-item-Kernstadt .c3-legend-item-tile, .chart-line .c3-legend-item-StadtRegionen-Gesamt .c3-legend-item-tile, .chart-line .c3-legend-item-Umland-ohne-Kernstädte .c3-legend-item-tile {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-legend-item-Umland .c3-legend-item-tile {
+  stroke-dasharray: 1, 1;
+}
+
+.chart-line .c3-legend-item-Umland-ohne-Kernstädte .c3-legend-item-tile {
+  stroke-dasharray: 3, 3;
+}
+
+.chart-line .c3-lines path {
+  stroke-width: 2px;
+} 
+
+.chart-line .c3-target-Umland .c3-lines-Umland path {
+  stroke-dasharray: 2, 2;
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-Kernstadt .c3-lines-Kernstadt path {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-StadtRegionen-Gesamt .c3-lines-StadtRegionen-Gesamt path {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-Umland-ohne-Kernstädte .c3-lines-Umland-ohne-Kernstädte path {
+  stroke-dasharray: 6, 6;
+  stroke-width: 1px;
+}
+
+.c3-axis .tick line {
+  stroke: #242424;
+  display: none;
+}
+
+.c3-axis .tick text {
+  fill: #242424;
+}
+
+.c3-axis .domain {
+  stroke: #b1b1b1;
+}
+
+/* Scatter plot circles */
+.c3-chart-lines .c3-chart-line .c3-shapes circle {
+  opacity: 1 !important;
+}
+
+.c3-event-rect {
+  cursor: default !important;
+}
+
+.c3-event-rect:hover {
+  cursor: default !important;
+}
+
+.c3-legend-item-hidden {
+    opacity: 0.25;
+}
