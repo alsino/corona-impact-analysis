@@ -1,3 +1,17 @@
+// API doc here: https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/
+// Inspiration: http://gabgoh.github.io/COVID/
+
+// Tomo: 
+// 1. Load data from url
+// 2. Draw chart dynamically
+
+// var chart = c3.generate({
+//   data: {
+//     url: '/data/c3_test.csv'
+//   }
+// });
+
+
 const CWIDTH = 550;
 const CHEIGHT = 300;
 
@@ -145,13 +159,14 @@ function loadData(){
         ]
       });
     },loadTime)
-
-
-
-
-
-
   }
 }
+
+
+
+let dateControl = document.querySelector('input[type="date"]');
+let today = moment().format("YYYY-MM-DD");
+// dateControl.value = today;
+dateControl.value = "2020-02-28";
 
 

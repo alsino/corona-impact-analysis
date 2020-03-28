@@ -22,10 +22,8 @@ section{
 label {
   font-size: 11px;
   font-family: 'IBM Plex Mono';
+  text-align: right;
 }
-
-#dashboard {
-} 
 
 .row {
   display: flex;
@@ -34,6 +32,23 @@ label {
 
 .controls {
   margin-top: 2em;
+}
+
+.input {
+  display: inline;
+}
+
+.ctrl {
+  display: flex;
+}
+
+.date, .slider {
+  display: inline-block;
+  flex: 0.25;
+}
+
+.date {
+  margin-right: 20px;
 }
 
 
@@ -119,4 +134,36 @@ label {
 
 .c3-legend-item-hidden {
     opacity: 0.25;
+}
+
+
+/* Tooltip */
+.c3-tooltip-container {
+  max-height: none !important;
+}
+
+.c3-tooltip {
+  box-shadow: none;
+  width: 100%;
+}
+
+.c3-tooltip tr {
+  background: red !important;;
+  border-left: none !important;
+  border-right: none !important;
+  border: none;
+}
+
+.c3-tooltip td.name {
+  border-left: none !important;
+}
+
+.c3-tooltip tr:first-child {
+  /* display: none; */
+  background: #fff !important;;
+  color: black !important;;
+}
+
+.c3-tooltip-container .c3-chart-line {
+  opacity: 1 !important;
 }

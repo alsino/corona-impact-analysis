@@ -11,6 +11,7 @@
   <link href="/css/main.css" rel="stylesheet">
 
   <!-- js -->
+  <script src="js/moment.js"></script>
   <script src="js/d3.v5.min.js"></script>
   <script src="js/c3.min.js"></script>
 
@@ -33,17 +34,66 @@
         <div id="chart-2" class="chart"></div>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div id="chart-3" class="chart"></div>
         <div id="chart-4" class="chart"></div>
-      </div>
+      </div> -->
 
       <div class="controls">
-        <div>
-          <label for="ps">Policy Strength</label>
-          <input type="range" id="pc" name="ps" min="0" max="100" value="30">
-          <label id="slider-1-value"></label>
+
+        <div id="initial" class="ctrl">
+          <div class="date">
+            <label for="ps">Initial Period</label>
+            <input type="date" id="start" name="trip-start" value="2020-03-28" min="2020-03-28" max="2020-06-30">
+          </div>
+  
+          <div class="slider">
+            <label for="ps">Policy Strength</label>
+            <input type="range" id="pc" name="ps" min="0" max="100" value="30">
+            <label id="slider-1-value"></label>
+          </div>
         </div>
+
+        <!-- <div id="lockdown" class="ctrl">
+          <div class="date">
+            <label for="ps">Lockdown</label>
+            <input type="date" id="start" name="trip-start" value="2020-03-28" min="2018-01-01" max="2018-12-31">
+          </div>
+  
+          <div class="slider">
+            <label for="ps">Policy Strength</label>
+            <input type="range" id="pc" name="ps" min="0" max="100" value="30">
+            <label id="slider-2-value"></label>
+          </div>
+        </div>
+
+        <div id="relaxation" class="ctrl">
+          <div class="date">
+            <label for="ps">Relaxation</label>
+            <input type="date" id="start" name="trip-start" value="2020-03-28" min="2018-01-01" max="2018-12-31">
+          </div>
+  
+          <div class="slider">
+            <label for="ps">Policy Strength</label>
+            <input type="range" id="pc" name="ps" min="0" max="100" value="30">
+            <label id="slider-2-value"></label>
+          </div>
+        </div>
+
+        <div id="normalization" class="ctrl">
+          <div class="date">
+            <label for="ps">Normalization</label>
+            <input type="date" id="start" name="trip-start" value="2020-03-28" min="2018-01-01" max="2018-12-31">
+          </div>
+  
+          <div class="slider">
+            <label for="ps">Policy Strength</label>
+            <input type="range" id="pc" name="ps" min="0" max="100" value="30">
+            <label id="slider-2-value"></label>
+          </div>
+        </div>
+         -->
+
       </div>
 
 
