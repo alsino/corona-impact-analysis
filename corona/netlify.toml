@@ -1,0 +1,9 @@
+# netlify .toml
+[build]
+  functions="functions"
+#   command="yarn build"
+
+# [dev]
+#   command = "yarn start" # Command to start your dev server
+#   targetPort =5000
+#   publish = "public"
