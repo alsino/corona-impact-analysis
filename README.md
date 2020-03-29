@@ -7,7 +7,7 @@ If you want to make changes to the code, you need to have Node.js installed on y
 
 Before development, you will need to clone this repository to your target directory:
 ```bash 
-git clone https://github.com/alsino/ils_stadt-regionen.git
+git clone https://github.com/alsino/corona-impact-analysis.git
 ```
 
 Open your terminal and navigate to the repository: 
