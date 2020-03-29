@@ -6,6 +6,8 @@
 // Inspiration: http://gabgoh.github.io/COVID/
 // Current: https://covid19-simulation.herokuapp.com/
 
+// CORS help: https://alligator.io/nodejs/solve-cors-once-and-for-all-netlify-dev/
+
 // Tomo: 
 // 1. Load data from url
 // 2. Draw chart dynamically
