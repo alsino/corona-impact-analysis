@@ -1,4 +1,16 @@
 <script>
+
+// Run netlify dev
+
+// API doc here: https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/
+// Inspiration: http://gabgoh.github.io/COVID/
+// Current: https://covid19-simulation.herokuapp.com/
+
+// Tomo: 
+// 1. Load data from url
+// 2. Draw chart dynamically
+
+
 	import { onMount, beforeUpdate } from 'svelte';
 	import Intro from './intro.svelte';
 	import ChartSteps from './charts/chartSteps.svelte';
