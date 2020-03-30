@@ -54,7 +54,7 @@ export async function requestAPI(endpoint){
   dataset.set(data)
   dataLoaded.set(true);
   // console.log(dataLoaded);
-  // console.log(res);
+  console.log(res);
   // console.log(data);
 }
 
