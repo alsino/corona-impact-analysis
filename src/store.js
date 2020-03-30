@@ -11,7 +11,7 @@ export const RPOINT = 2;
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "Dead": "#00CBDB",
-    "ICU": "blue",
+    "ICU": "#FFBB00",
 }
 
 params.set({
