@@ -6,11 +6,12 @@ export const params = writable(undefined);
 
 export const CWIDTH = 550;
 export const CHEIGHT = 250;
+export const RPOINT = 2;
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "Dead": "#F76906",
-    "data3": "#FFBB00",
+    "ICU": "#FFBB00",
     "data4": "#57C494"
 }
 

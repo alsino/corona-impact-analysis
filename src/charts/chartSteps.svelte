@@ -1,19 +1,19 @@
 <script>
 
-  export let id;
+export let id;
 
-	import * as d3 from "d3";
-	import c3 from "c3";
-  import '../../node_modules/c3/c3.min.css';
+import * as d3 from "d3";
+import c3 from "c3";
+import '../../node_modules/c3/c3.min.css';
 
-  import { onMount, beforeUpdate } from 'svelte';
-  import { dataLoaded } from '../store.js';
-  import { dataset } from '../store.js';
-  import { COLORS } from '../store.js';
-  import { CWIDTH } from '../store.js';
-  import { CHEIGHT } from '../store.js';
-
-  let chart;
+import { onMount, beforeUpdate } from 'svelte';
+import { dataLoaded } from '../store.js';
+import { dataset } from '../store.js';
+import { COLORS } from '../store.js';
+import { CWIDTH } from '../store.js';
+import { CHEIGHT } from '../store.js';
+import { RPOINT } from '../store.js';
+let chart;
 
 function renderChart(timeOut){
 
@@ -52,7 +52,10 @@ function renderChart(timeOut){
         grid:{
           focus:{
             show:false
-        }
+          }
+        },
+        point: {
+            r: RPOINT
         } 
         // legend: {
         //   position: 'inset'
