@@ -5,87 +5,96 @@
   import '../../node_modules/c3/c3.min.css';
 
   import { onMount, beforeUpdate } from 'svelte';
+  import { dataLoaded } from '../store.js';
   import { dataset } from '../store.js';
 
-	// import { id } from '../stores.js';
-	// import { subjectVal } from '../stores.js';
-	// import { datasets } from '../stores.js';
-	// import { colors } from '../stores.js';
-	// import { hideSeries }  from '../stores.js';
-	// import { locale, formatGermany, formatAxes }  from '../stores.js';
+  const CWIDTH = 550;
+  const CHEIGHT = 300;
 
-	// import parseData  from '../assets/parseData';
-
-	// let chart;
-  // let parsedData;
-
-
-const CWIDTH = 550;
-const CHEIGHT = 300;
-
-const COLORS = {
-  "data1": '#00CBDB',
-  "data2": "#F76906",
-  "data3": "#FFBB00",
-  "data4": "#57C494"
-}
-
-let chart1Data =  ['data1', 300, 350, 300, 600, 200, 150, 340, 260, 200, 300];
-let chart1DataNew = ['data1', 100, 250, 400, 70, 90, 310, 240, 560, 300, 400];
+  const COLORS = {
+    "data1": '#00CBDB',
+    "data2": "#F76906",
+    "data3": "#FFBB00",
+    "data4": "#57C494"
+  }
 
 
 onMount(() => {
 
+    setTimeout(() => {
+
+      console.log($dataset)
+      
+      let timeLine =  $dataset["time"];
+      let reduction = $dataset["Reduction in new infections through policy"];
+
+      let columns = [timeLine,reduction];
+      console.log(columns);
+
+
     let chart1 = c3.generate({
-    bindto: '#chart-steps',
-    size: {
-      width: CWIDTH,
+      bindto: '#chart-steps',
+      size: {
+        width: CWIDTH,
+      },
+      tooltip: {
+        grouped: true
+      },
+      data: {
+          x: 'time',
+          columns: [timeLine,reduction],
+          types: {
+              data1: 'step'
+          },
+          names: {
+            data1: 'Reduction in new infections through policy'
+          },
+          colors: COLORS
+      },
+      axis : {
+        x : {
+            type : 'timeseries',
+            tick: {
+              format: "%b" // format string is also available for timeseries data
+            }
+        }
     },
-    tooltip: {
-      grouped: true
-    },
-    data: {
-        columns: [chart1Data],
-        types: {
-            data1: 'step'
-        },
-        names: {
-          data1: 'Policy Strength'
-        },
-        colors: COLORS
-    },
-    axis: {
-      x: {
-        type: "category",
-        categories: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+      grid:{
+        focus:{
+          show:false
       }
-    },
-    grid:{
-      focus:{
-        show:false
-    }
-    } 
-    // legend: {
-    //   position: 'inset'
-    // }
-  });
+      } 
+      // legend: {
+      //   position: 'inset'
+      // }
+    });
+
+
+
+
+
+    }, 3000);
+    
+
+
+    
+
 
 });
 
 </script>
 
 
+
+
 <style>
-
-
-
 
 </style>
 
 
 
 
- <div id="chart-steps"></div>
+ <div id="chart-steps" class="cChart"></div>
 
 
 

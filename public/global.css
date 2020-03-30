@@ -80,3 +80,8 @@ span {
 input {
 	margin-right: 20px;
 }
+
+.cChart {
+	display: inline-block;
+	margin: 20px 0;
+}
