@@ -78,17 +78,7 @@ beforeUpdate(() => {
 
 </script>
 
-
-
-
-<style>
-
-</style>
-
-
-
-
- <div id={id} class="cChart"></div>
+<div id={id} class="cChart"></div>
 
 
 

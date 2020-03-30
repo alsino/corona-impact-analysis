@@ -8,6 +8,10 @@
 // Data loading per promise not per timeout
 // Update charts not per re-render but just data update
 
+// ToDos
+// 1. Hook up controls to correct parameters
+// 2. Add remaining charts
+
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
 	import Intro from './intro.svelte';
@@ -88,43 +92,6 @@
 		<Control label={"P_self_quarantine"} small={true} end={false}/>
 		<Control label={"End of simulation"} small={false} end={true}/>
 	</div>
-	
-
-	<!-- <div>
-		<span>Beginning</span>
-		<input type=text bind:value={settings.policy_period1} on:change={update}>
-		<span>Policy Strength</span>
-		<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
-		<span>{settings.policy_strength1}</span>
-	</div> -->
-
-	<!-- <div>
-		<span>Policy Intervention 1</span>
-		<input type=text bind:value={settings.policy_period1} on:change={update}>
-		<span>Policy Strength</span>
-		<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
-		<span>{settings.policy_strength1}</span>
-	</div>
-
-	<div>
-		<span>Policy Intervention 2</span>
-		<input type=text bind:value={settings.policy_period1} on:change={update}>
-		<span>Policy Strength</span>
-		<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
-		<span>{settings.policy_strength1}</span>
-	</div> -->
-
-
-	<!-- <div>{JSON.stringify(data)}</div> -->
-
-	<!-- {#if data}
-		<div>{JSON.stringify(data)}</div>
-	{/if} -->
-
-
-
-
-
 </div>
 
 
@@ -138,8 +105,6 @@
 				margin-top: 2em;
 			}
 	}
-
-	
 
 	@media (max-width: 640px) {
 		#app {

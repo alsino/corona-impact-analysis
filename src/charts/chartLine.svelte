@@ -15,13 +15,6 @@ import { CHEIGHT } from '../store.js';
 import { RPOINT } from '../store.js';
 let chart;
 
-// const COLORS = {
-//     "Reduction in new infections through policy": 'blue',
-//     "Dead": "red",
-//     "ICU": "green",
-//     "data4": "#57C494"
-// }
-
 function renderChart(timeOut){
 
     setTimeout(() => {

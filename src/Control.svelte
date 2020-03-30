@@ -86,10 +86,7 @@
 
 	</div>
 
-
-
 {:else}
-
 
 	<div class="ctrl">
 		<div class="date">
