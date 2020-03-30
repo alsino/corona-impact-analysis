@@ -1,45 +1,32 @@
 <script>
 
-// Run netlify dev
-
 // API doc here: https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/
 // Inspiration: http://gabgoh.github.io/COVID/
 // Current: https://covid19-simulation.herokuapp.com/
 
-// CORS help: https://alligator.io/nodejs/solve-cors-once-and-for-all-netlify-dev/
 
-// Tomo: 
-// 1. Load data from url
-// 2. Draw chart dynamically
-
-
+	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
 	import Intro from './intro.svelte';
 	import ChartSteps from './charts/chartSteps.svelte';
+	import { params } from './store.js';
+	import { getData } from './store.js';
 
 
-	let dataSet;
+	let settings = $params;
+	let API_ENDPOINT = 
+	`https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/simulate?policy_period1=${$params.policy_period1}&policy_strength1=${$params.policy_strength1}`;
+
 
 	onMount(async () => {
-
-			
-
+		// getData();
+		console.log(settings);
 	});
-
-	async function getData(){
-		const res = await fetch("/.netlify/functions/node-fetch")
-			.then(function(res) {
-					res.text()
-						.then(function(data){
-							dataSet = JSON.parse(data)
-							console.log(dataSet)
-						})
-			})
-	}
 
 
 	function handleClick() {
-		getData();
+		console.log(API_ENDPOINT)
+		getData(API_ENDPOINT);
 	}
 
 
@@ -52,9 +39,9 @@
 
 	<button on:click={handleClick}>Get data from API</button>
 
-	{#if dataSet}
+	<!-- {#if dataSet}
 		<div>{JSON.stringify(dataSet)}</div>
-	{/if}
+	{/if} -->
 
 
 </div>

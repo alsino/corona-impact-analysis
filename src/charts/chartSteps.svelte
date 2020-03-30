@@ -5,7 +5,7 @@
   import '../../node_modules/c3/c3.min.css';
 
   import { onMount, beforeUpdate } from 'svelte';
-  import { dataset } from '../stores.js';
+  import { dataset } from '../store.js';
 
 	// import { id } from '../stores.js';
 	// import { subjectVal } from '../stores.js';
