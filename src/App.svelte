@@ -34,7 +34,6 @@
 
 	}
 
-
 </script>
 
 <div id="app">
@@ -42,7 +41,6 @@
 	<ChartSteps/>
 
 	<!-- <button on:click={handleClick}>Get data from API</button> -->
-
 
 	<label>
 		<span>Beginning</span>
