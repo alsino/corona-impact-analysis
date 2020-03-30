@@ -4,6 +4,16 @@ export const dataLoaded = writable(false);
 export const dataset = writable(undefined);
 export const params = writable(undefined);
 
+export const CWIDTH = 550;
+export const CHEIGHT = 250;
+
+export const COLORS = {
+    "Reduction in new infections through policy": '#00CBDB',
+    "Dead": "#F76906",
+    "data3": "#FFBB00",
+    "data4": "#57C494"
+}
+
 params.set({
   "policy_period0": "2020-01-12",
   "policy_period1": "2020-03-14",
@@ -46,6 +56,8 @@ params.set({
   "Hypothetical%20R0": 2.4
 });
 
+
+
 	
 	
 export async function requestAPI(endpoint){
@@ -54,8 +66,8 @@ export async function requestAPI(endpoint){
   dataset.set(data)
   dataLoaded.set(true);
   // console.log(dataLoaded);
-  console.log(res);
-  // console.log(data);
+  // console.log(res);
+  console.log(data);
 }
 
 // export async function getData(API_ENDPOINT){

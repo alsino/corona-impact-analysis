@@ -4,6 +4,10 @@
 // Inspiration: http://gabgoh.github.io/COVID/
 // Current: https://covid19-simulation.herokuapp.com/
 
+// Issues
+// Data loading per promise not per timeout
+// Update charts not per re-render but just data update
+
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
 	import Intro from './intro.svelte';
@@ -118,7 +122,8 @@
 
 <div id="app">
 	<Intro/>
-	<ChartSteps/>
+	<ChartSteps id={"chart-steps"}/>
+	<ChartLine id={"chart-mask"}/>
 	<!-- <ChartLine/> -->
 
 	<!-- <button on:click={handleClick}>Get data from API</button> -->
