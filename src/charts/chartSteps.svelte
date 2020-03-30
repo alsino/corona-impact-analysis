@@ -51,7 +51,7 @@ function renderChart(timeOut){
       },
         grid:{
           focus:{
-            show:false
+            show:true
           }
         },
         point: {

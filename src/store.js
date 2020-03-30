@@ -4,14 +4,23 @@ export const dataLoaded = writable(false);
 export const dataset = writable(undefined);
 export const params = writable(undefined);
 
-export const CWIDTH = 550;
-export const CHEIGHT = 250;
+export let WWIDTH = window.innerWidth;
+export let WHEIGHT = window.innerHeight;
+
+export let CWIDTH = 550;
+export let CHEIGHT = 250;
 export const RPOINT = 2;
+
+WWIDTH < 640 ? CWIDTH = 400 : 550;
+
+
+
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "Dead": "#00CBDB",
     "ICU": "#FFBB00",
+    "data1": "#6FA6B9"
 }
 
 params.set({

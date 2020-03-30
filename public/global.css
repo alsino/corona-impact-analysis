@@ -83,5 +83,110 @@ input {
 
 .cChart {
 	display: inline-block;
-	margin: 20px 0;
+	margin: 20px;
+}
+
+.chart .c3-grid .c3-xgrid-focus {
+  visibility : hidden !important;
+}
+
+.c3 svg, .c3-legend-item  {
+  font-family: 'IBM Plex Mono';
+  font-size: 11px !important;
+}
+
+.chart .c3-legend-item-tile {
+  stroke-width: 2px;
+}
+
+.chart-line .c3-legend-item-Umland .chart-line .c3-legend-item-tile, .chart-line .c3-legend-item-Kernstadt .c3-legend-item-tile, .chart-line .c3-legend-item-StadtRegionen-Gesamt .c3-legend-item-tile, .chart-line .c3-legend-item-Umland-ohne-Kernstädte .c3-legend-item-tile {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-legend-item-Umland .c3-legend-item-tile {
+  stroke-dasharray: 1, 1;
+}
+
+.chart-line .c3-legend-item-Umland-ohne-Kernstädte .c3-legend-item-tile {
+  stroke-dasharray: 3, 3;
+}
+
+.chart-line .c3-lines path {
+  stroke-width: 2px;
+} 
+
+.chart-line .c3-target-Umland .c3-lines-Umland path {
+  stroke-dasharray: 2, 2;
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-Kernstadt .c3-lines-Kernstadt path {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-StadtRegionen-Gesamt .c3-lines-StadtRegionen-Gesamt path {
+  stroke-width: 1px;
+}
+
+.chart-line .c3-target-Umland-ohne-Kernstädte .c3-lines-Umland-ohne-Kernstädte path {
+  stroke-dasharray: 6, 6;
+  stroke-width: 1px;
+}
+
+.c3-axis .tick line {
+  stroke: #242424;
+  display: none;
+}
+
+.c3-axis .tick text {
+  fill: #242424;
+}
+
+.c3-axis .domain {
+  stroke: #b1b1b1;
+}
+
+
+
+/* Tooltip */
+.c3-tooltip-container {
+  max-height: none !important;
+}
+
+.c3-tooltip {
+  box-shadow: none;
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	opacity: 1;
+}
+
+.c3-tooltip tr {
+  /* border-left: none !important;
+  border-right: none !important; */
+	border: none;
+	opacity: 1;
+}
+
+.c3-tooltip td.name {
+	border-left: none !important;
+	opacity: 1;
+}
+
+.c3-tooltip tr:first-child {
+	/* display: none; */
+  /* background: #fff !important;
+  color: black !important; */
+}
+
+.c3-tooltip th {
+	background-color: #fff;
+	opacity: 1;
+	font-size: 14px;
+	padding: 2px 5px;
+	text-align: left;
+	color: #565656;
+}
+
+.c3-tooltip-container .c3-chart-line {
+  opacity: 0 !important;
 }

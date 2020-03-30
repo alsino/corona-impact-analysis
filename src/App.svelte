@@ -124,8 +124,6 @@
 	<Intro/>
 	<ChartSteps id={"chart-steps"}/>
 	<ChartLine id={"chart-mask"}/>
-	<!-- <ChartLine/> -->
-
 	<!-- <button on:click={handleClick}>Get data from API</button> -->
 
 
@@ -164,10 +162,15 @@
 	#app {
 		margin: 2em 6em 0 6em;
 	}
-	// @media (min-width: 640px) {
-	// 	main {
-	// 		max-width: none;
-	// 	}
-	// }
+
+	@media (max-width: 640px) {
+		#app {
+			margin: 1em;
+		}
+
+		.cChart {
+			margin: 0px;
+		}
+	}
 
 </style>
