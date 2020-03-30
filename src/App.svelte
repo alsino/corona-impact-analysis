@@ -42,6 +42,7 @@
 
 	<!-- <button on:click={handleClick}>Get data from API</button> -->
 
+
 	<label>
 		<span>Beginning</span>
 		<input type=text bind:value={settings.policy_period1} on:change={update}>
