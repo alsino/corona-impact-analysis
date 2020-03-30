@@ -34,7 +34,7 @@ function renderChart(timeOut){
           data: {
             x: 'time',
             columns: [timeLine, dead, icu],
-            type: 'spline'
+            type: 'bar'
           },
           axis: {
             x: {
