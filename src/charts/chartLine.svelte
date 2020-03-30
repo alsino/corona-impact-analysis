@@ -15,6 +15,13 @@ import { CHEIGHT } from '../store.js';
 import { RPOINT } from '../store.js';
 let chart;
 
+// const COLORS = {
+//     "Reduction in new infections through policy": 'blue',
+//     "Dead": "red",
+//     "ICU": "green",
+//     "data4": "#57C494"
+// }
+
 function renderChart(timeOut){
 
     setTimeout(() => {
@@ -22,7 +29,7 @@ function renderChart(timeOut){
       let dead = $dataset["Dead"];
       let icu = $dataset["ICU"];
 
-      console.log(timeLine)
+      // console.log(timeLine)
 
 
       chart = c3.generate({
@@ -34,7 +41,9 @@ function renderChart(timeOut){
           data: {
             x: 'time',
             columns: [timeLine, dead, icu],
-            type: 'bar'
+            type: 'bar',
+            groups: [['Dead', 'ICU']],
+            colors: COLORS
           },
           axis: {
             x: {
