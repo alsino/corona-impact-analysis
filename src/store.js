@@ -8,8 +8,8 @@ export let dataset = writable(undefined);
 export const params = writable(undefined);
 
 params.set({
-    "policy_period1": "2020-05-05",
-    "policy_strength1": 0.0,
+    "policy_period1": "2020-03-21",
+    "policy_strength1": 0.2,
     "policy_period2": "2020-03-21",
     "policy_strength2": 1.0,
     "policy_period3": "2020-03-21",
@@ -23,11 +23,14 @@ export async function getData(API_ENDPOINT){
   axios.get(API_ENDPOINT)
     .then(function (response) {
       // handle success
-      dataset = response;
+      dataset.set(response);
       console.log(response);
     })
     .catch(function (error) {
       // handle error
       console.log(error);
+    })
+    .then(function (){
+      dataLoaded.set(true)
     })
 }
