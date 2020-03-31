@@ -9,8 +9,8 @@
 // Update charts not per re-render but just data update
 
 // ToDos
-// 1. Hook up controls to correct parameters
-// 2. Add parameter section on bottom
+// 1. Add parameter section on bottom
+// 2. Mobile Responsiveness
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
