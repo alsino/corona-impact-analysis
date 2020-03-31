@@ -128,7 +128,7 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Control label={"Beginning"} small={false} end={false}/>
+				<Control label={"Beginning"} small={false} end={true} date={settings.policy_period1} strength={settings.policy_strength1}/>
 				<Control label={"Policy Intervention 1"} small={false} end={false}/>
 				<Control label={"Policy Intervention 2"} small={false} end={false}/>
 				<Control label={"Policy Intervention 3"} small={false} end={false}/>
@@ -140,23 +140,23 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Control label={"Beginning"} small={false} end={false}/>
+				<!-- <Control label={"Beginning"} small={false} end={false}/>
 				<Control label={"Policy Intervention 1"} small={false} end={false}/>
 				<Control label={"Policy Intervention 2"} small={false} end={false}/>
 				<Control label={"Policy Intervention 3"} small={false} end={false}/>
 				<Control label={"P_self_quarantine"} small={true} end={false}/>
-				<Control label={"End of simulation"} small={false} end={true}/>
+				<Control label={"End of simulation"} small={false} end={true}/> -->
 			</div>
 		</TabPanel>
 
 		<TabPanel>
-		<div class="tab-wrapper">
-				<Control label={"Beginning"} small={false} end={false}/>
+			<div class="tab-wrapper">
+				<!-- <Control label={"Beginning"} small={false} end={false}/>
 				<Control label={"Policy Intervention 1"} small={false} end={false}/>
 				<Control label={"Policy Intervention 2"} small={false} end={false}/>
 				<Control label={"Policy Intervention 3"} small={false} end={false}/>
 				<Control label={"P_self_quarantine"} small={true} end={false}/>
-				<Control label={"End of simulation"} small={false} end={true}/>
+				<Control label={"End of simulation"} small={false} end={true}/> -->
 			</div>
 		</TabPanel>
 	</Tabs>

@@ -3,6 +3,8 @@
 	export let label;
 	export let small;
 	export let end;
+	export let date;
+	export let strength;
 
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
