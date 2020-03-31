@@ -179,7 +179,10 @@
 				flex: 1;
 				// background: blue;
 
-			
+				.row {
+					display: flex;
+					justify-content: space-between;
+				}
 			}
 		}
 

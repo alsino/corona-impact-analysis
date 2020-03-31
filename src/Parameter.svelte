@@ -10,6 +10,7 @@
 	import { onMount, beforeUpdate } from 'svelte';
 	let settings = $params;
 	let parameterNames = Object.keys(settings);
+	// parameterNames = parameterNames.splice(0, 8)
 	let parameterValues = Object.values(settings);
 	let API;
 
