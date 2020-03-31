@@ -70,77 +70,66 @@ export let params2 = [
   "name": "r0",
   "min": 0,
   "max": 10,
-  "preset": 5
   },
   {
   "descr": "Non-infectious incubation period",
   "name": "t_incubation",
   "min" : 0,
   "max" : 10,
-  "preset" : 4.5
   },
   {
   "descr": "Infectious incubation period",
   "name": "t_presymptomatic",
   "min" : 0,
   "max" : 10,
-  "preset" : 0.5
   },
   {
   "descr": "Illness duration asymptomatic course",
   "name": "t_recovery_asymptomatic",
   "min" : 0,
   "max" : 30,
-  "preset" : 6
   },
   {
   "descr": "Illness duration mild course",
   "name": "t_recovery_mild",
   "min" : 0,
   "max" : 30,
-  "preset" : 6
   },
   {
   "descr": "Illness duration severe course - initial days at home",
   "name": "t_home_severe",
   "min" : 0,
   "max" : 30,
-  "preset" : 5
   },
   {
   "descr": "Illness duration severe course - days in hospital if recovered",
   "name": "t_hospital_severe_recovered",
   "min" : 0,
   "max" : 30,
-  "preset" : 10.4
   },
   {
   "descr": "Illness duration severe course - days in hospital if deceased",
   "name": "t_hospital_severe_deceased",
   "min" : 0,
   "max" : 30,
-  "preset" : 10.4
   },
   {
   "descr": "Fraction of individuals with asymptomatic course",
   "name": "p_asymptomatic",
   "min" : 0,
   "max" : 1,
-  "preset": 0.3
   },
   {
   "descr": "Fraction of individuals hospitalized / severe course",
   "name": "p_severe",
   "min" : 0,
   "max" : 1,
-  "preset": 0.044
   },
   {
   "descr": "Mortality rate",
   "name": "p_fatal",
   "min" : 0,
   "max" : 1,
-  "preset" : 0.009
   }
 ]
 

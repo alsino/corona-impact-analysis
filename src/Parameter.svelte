@@ -83,7 +83,14 @@
 	<div class="ctrl">
 		<div class="date">
 			<span>{par.name}</span>
-			<input type=range bind:value={settings[par.name]} min=0 max=1 step=0.1 on:change={update}>
+			<input 
+				type=range 
+				bind:value={settings[par.name]} 
+				min={par.min} 
+				max={par.max} 
+				step=0.1 
+				on:change={update}
+			>
 			<span>{settings[par.name]}</span>
 		</div>
 		<div class="spacer"></div>
