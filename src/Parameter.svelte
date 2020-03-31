@@ -1,17 +1,26 @@
 <script>
 
-	export let id;
-	export let label;
-	export let small;
-	export let end;
+
+// Object.filter = (obj, predicate) => 
+//     Object.keys(obj)
+//           .filter( key => predicate(obj[key]) )
+//           .reduce( (res, key) => (res[key] = obj[key], res), {} );
+
+// // Example use:
+// var scores = {
+//     John: 2, Sarah: 3, Janet: 1
+// };
+// var filtered = Object.filter(scores, score => score > 1); 
+// console.log(filtered);
+
+	// export let id;
+	
 
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
+	import { params2 } from './store.js';
 	import { onMount, beforeUpdate } from 'svelte';
 	let settings = $params;
-	let parameterNames = Object.keys(settings);
-	// parameterNames = parameterNames.splice(0, 8)
-	let parameterValues = Object.values(settings);
 	let API;
 
 	
@@ -64,19 +73,18 @@
 	}
 
 	onMount(async () => {
-		console.log(parameterNames);
+		console.log(params2[0]);
 	});
 
 
 </script>
 
-
-{#each parameterNames as par, i}
+{#each params2 as par, i}
 	<div class="ctrl">
 		<div class="date">
-			<span>{par}</span>
-			<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
-			<span>{settings.policy_strength1}</span>
+			<span>{par.name}</span>
+			<input type=range bind:value={settings[par.name]} min=0 max=1 step=0.1 on:change={update}>
+			<span>{settings[par.name]}</span>
 		</div>
 		<div class="spacer"></div>
 		<div class="strength"></div>	
@@ -89,6 +97,14 @@
 .ctrl {
 	display: flex;
 	align-items: center;
+
+	span {
+		font-family: 'IBM Plex Mono';
+		font-size: 12px !important;
+		min-height: 20px;
+  	display: inline-flex;
+		align-items: center;
+	}
 	
 	.date {
 		flex: 1;

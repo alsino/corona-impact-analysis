@@ -150,6 +150,14 @@
 .ctrl {
 	display: flex;
 	align-items: center;
+
+	span {
+		font-family: 'IBM Plex Mono';
+		font-size: 12px !important;
+		min-height: 20px;
+  	display: inline-flex;
+  align-items: center;
+	}
 	
 	.date {
 		flex: 1;
