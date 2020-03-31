@@ -76,22 +76,34 @@
 </script>
 
 <div id="app">
+
 	<Intro/>
 
-	<div id="charts">
-		<ChartSteps id={"chart-steps"}/>
-		<ChartLine id={"chart-mask"}/>
-	</div>
-	
+	<section id="charts">
+		<div id="highlight">
+			<ChartLine id={"chart-0"} width={550} height={400}/>
+		</div>
+		<div id="multiple">
+			<div class="row">
+				<ChartLine id={"chart-1"} width={300} height={200}/>
+				<ChartSteps id={"chart-2"}/>
+			</div>
+			<div class="row">
+				<ChartLine id={"chart-3"} width={300} height={200}/>
+				<ChartSteps id={"chart-4"}/>
+			</div>
+		</div>
+	</section>
 
-	<div id="controls">
+	<section id="controls">
 		<Control label={"Beginning"} small={false} end={false}/>
 		<Control label={"Policy Intervention 1"} small={false} end={false}/>
 		<Control label={"Policy Intervention 2"} small={false} end={false}/>
 		<Control label={"Policy Intervention 3"} small={false} end={false}/>
 		<Control label={"P_self_quarantine"} small={true} end={false}/>
 		<Control label={"End of simulation"} small={false} end={true}/>
-	</div>
+	</section>
+
 </div>
 
 
@@ -101,9 +113,29 @@
 	#app {
 		margin: 2em 6em 0 6em;
 
-			#controls {
-				margin-top: 2em;
+		#charts {
+			display: flex;
+			height: 400px;
+
+			#highlight {
+				flex: 0.9;
+				// background: red;
 			}
+
+			#multiple {
+				flex: 1;
+				// background: blue;
+
+				.row {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+
+		#controls {
+			margin-top: 2em;
+		}
 	}
 
 	@media (max-width: 640px) {

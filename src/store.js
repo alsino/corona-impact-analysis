@@ -7,8 +7,8 @@ export const params = writable(undefined);
 export let WWIDTH = window.innerWidth;
 export let WHEIGHT = window.innerHeight;
 
-export let CWIDTH = 550;
-export let CHEIGHT = 250;
+export let CWIDTH = 300;
+export let CHEIGHT = 200;
 export const RPOINT = 2;
 
 WWIDTH < 640 ? CWIDTH = 320 : 550;
