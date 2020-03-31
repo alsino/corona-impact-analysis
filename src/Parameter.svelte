@@ -1,21 +1,5 @@
 <script>
 
-
-// Object.filter = (obj, predicate) => 
-//     Object.keys(obj)
-//           .filter( key => predicate(obj[key]) )
-//           .reduce( (res, key) => (res[key] = obj[key], res), {} );
-
-// // Example use:
-// var scores = {
-//     John: 2, Sarah: 3, Janet: 1
-// };
-// var filtered = Object.filter(scores, score => score > 1); 
-// console.log(filtered);
-
-	// export let id;
-	
-
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
 	import { params2 } from './store.js';
@@ -82,7 +66,7 @@
 {#each params2 as par, i}
 	<div class="ctrl">
 		<div class="date">
-			<span>{par.name}</span>
+			<span>{par.descr} ({par.name})</span>
 			<input 
 				type=range 
 				bind:value={settings[par.name]} 
@@ -93,8 +77,6 @@
 			>
 			<span>{settings[par.name]}</span>
 		</div>
-		<div class="spacer"></div>
-		<div class="strength"></div>	
 	</div>
 {/each}
 
@@ -109,13 +91,19 @@
 		font-family: 'IBM Plex Mono';
 		font-size: 12px !important;
 		min-height: 20px;
-  	display: inline-flex;
+  	// display: inline-flex;
 		align-items: center;
+		flex: 1;
+
+		&:nth-of-type(2){
+			text-align: left;
+		}
 	}
 	
 	.date {
 		flex: 1;
 		text-align: right;
+		display: flex;
 	}
 
 	.date-small {
