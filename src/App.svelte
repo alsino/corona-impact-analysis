@@ -85,8 +85,8 @@
 		</div>
 		<div id="multiple">
 			<div class="row">
-				<ChartLine id={"chart-1"} width={360} height={200}/>
 				<ChartSteps id={"chart-2"} width={360} height={200}/>
+				<!-- <ChartLine id={"chart-1"} width={360} height={200}/> -->
 			</div>
 			<div class="row">
 				<ChartLine id={"chart-3"} width={360} height={200}/>
