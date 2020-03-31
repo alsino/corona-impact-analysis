@@ -3,6 +3,12 @@
 export let id;
 export let height;
 export let width;
+export let multiple;
+export let data1;
+export let data2;
+export let capacity;
+export let capacity1;
+export let capacity2;
 
 import * as d3 from "d3";
 import c3 from "c3";
@@ -19,16 +25,32 @@ let chart;
 
 function renderChart(timeOut){
 
+
     setTimeout(() => {
       let timeLine =  $dataset["time"];
-      let HospitalizedExclICU = $dataset["HospitalizedExclICU"];
-      let icu = $dataset["ICU"];
-      let icuCapacity = $dataset["IcuCapacity"];
-      let HospitalCapacity = $dataset["HospitalCapacity"];
+      let dataSet1 = $dataset[data1];
+      let dataSet2 = $dataset[data2];
+      let columns;
+      let lines;
 
+      if (multiple){
+         columns = [timeLine, dataSet1, dataSet2];
+      } else {
+         columns = [timeLine, dataSet1];
+      }
 
-      // console.log(timeLine)
+      let line1 = $dataset[capacity1];
+      let line2 = $dataset[capacity2];
 
+      if (capacity){
+        lines = [
+            {value: line1[1], text: line1[0], position: 'start'},
+            {value: line2[1], text: line2[0], position: 'start'},
+          ]
+      } else {lines = []}
+
+      
+     
 
       chart = c3.generate({
           bindto: `#${id}`,
@@ -38,9 +60,9 @@ function renderChart(timeOut){
         },
           data: {
             x: 'time',
-            columns: [timeLine, HospitalizedExclICU, icu],
+            columns: columns,
             type: 'bar',
-            groups: [['HospitalizedExclICU', 'ICU']],
+            groups: [[data1, data2]],
             colors: COLORS
           },
           axis: {
@@ -56,10 +78,7 @@ function renderChart(timeOut){
         },
         grid: {
         y: {
-          lines: [
-            {value: icuCapacity[1], text: icuCapacity[0], position: 'start'},
-            {value: HospitalCapacity[1], text: HospitalCapacity[0], position: 'start'},
-          ]
+          lines: lines
         }
     }
       });

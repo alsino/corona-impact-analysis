@@ -3,6 +3,7 @@
 export let id;
 export let height;
 export let width;
+export let data;
 
 import * as d3 from "d3";
 import c3 from "c3";
@@ -21,7 +22,7 @@ function renderChart(timeOut){
 
     setTimeout(() => {
       let timeLine =  $dataset["time"];
-      let reduction = $dataset["Reduction in new infections through policy"];
+      let reduction = $dataset[data];
 
       chart = c3.generate({
         bindto: `#${id}`,
@@ -39,7 +40,7 @@ function renderChart(timeOut){
                 data1: 'step'
             },
             names: {
-              data1: 'Reduction in new infections through policy'
+              data1: data
             },
             colors: COLORS
         },

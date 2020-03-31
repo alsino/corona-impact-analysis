@@ -17,7 +17,9 @@ export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "HospitalizedExclICU": "#00CBDB",
     "ICU": "#FFBB00",
-    "data1": "#6FA6B9"
+    "Hypothetical R0": "#00CBDB",
+    "Currently_infected": "#00CBDB",
+    "R_combined": "#00CBDB"  
 }
 
 params.set({

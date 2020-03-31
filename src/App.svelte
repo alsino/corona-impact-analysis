@@ -16,7 +16,7 @@
 	import { onMount, beforeUpdate } from 'svelte';
 	import Intro from './intro.svelte';
 	import ChartSteps from './charts/chartSteps.svelte';
-	import ChartLine from './charts/chartLine.svelte';
+	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
@@ -81,16 +81,37 @@
 
 	<section id="charts">
 		<div id="highlight">
-			<ChartLine id={"chart-0"} width={500} height={400}/>
+			<ChartBar id={"chart-0"} 
+				width={500} 
+				height={400} 
+				multiple={true} 
+				data1={"HospitalizedExclICU"} 
+				data2={"ICU"} 
+				capacity={true} 
+				capacity1={"IcuCapacity"} 
+				capacity2={"HospitalCapacity"}
+			/>
 		</div>
 		<div id="multiple">
 			<div class="row">
-				<ChartSteps id={"chart-2"} width={360} height={200}/>
-				<!-- <ChartLine id={"chart-1"} width={360} height={200}/> -->
+				<ChartSteps id={"chart-1"} width={370} height={200} data={"Reduction in new infections through policy"}/>
+				<ChartSteps id={"chart-2"} width={370} height={200} data={"Hypothetical R0"}/>
 			</div>
 			<div class="row">
-				<ChartLine id={"chart-3"} width={360} height={200}/>
-				<ChartSteps id={"chart-4"} width={360} height={200}/>
+				<ChartBar id={"chart-3"} 
+					width={370} 
+					height={200} 
+					multiple={false} 
+					data1={"Currently_infected"} 
+					capacity={false} 
+				/>
+				<ChartBar id={"chart-4"} 
+					width={370} 
+					height={200} 
+					multiple={false} 
+					data1={"R_combined"} 
+					capacity={false} 
+				/>
 			</div>
 		</div>
 	</section>
