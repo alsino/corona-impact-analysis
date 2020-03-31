@@ -85,12 +85,12 @@
 		</div>
 		<div id="multiple">
 			<div class="row">
-				<ChartLine id={"chart-1"} width={300} height={200}/>
-				<ChartSteps id={"chart-2"}/>
+				<ChartLine id={"chart-1"} width={360} height={200}/>
+				<ChartSteps id={"chart-2"} width={360} height={200}/>
 			</div>
 			<div class="row">
-				<ChartLine id={"chart-3"} width={300} height={200}/>
-				<ChartSteps id={"chart-4"}/>
+				<ChartLine id={"chart-3"} width={360} height={200}/>
+				<ChartSteps id={"chart-4"} width={360} height={200}/>
 			</div>
 		</div>
 	</section>
@@ -115,7 +115,7 @@
 
 		#charts {
 			display: flex;
-			height: 400px;
+			// height: 400px;
 
 			#highlight {
 				flex: 0.9;

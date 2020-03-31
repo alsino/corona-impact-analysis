@@ -1,6 +1,8 @@
 <script>
 
 export let id;
+export let height;
+export let width;
 
 import * as d3 from "d3";
 import c3 from "c3";
@@ -24,8 +26,8 @@ function renderChart(timeOut){
       chart = c3.generate({
         bindto: `#${id}`,
         size: {
-          width: CWIDTH,
-          height: CHEIGHT,
+          width: width,
+          height: height,
         },
         tooltip: {
           grouped: true
