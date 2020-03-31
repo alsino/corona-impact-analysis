@@ -70,7 +70,8 @@ button:not(:disabled):active {
 }
 
 button:focus {
-	border-color: #666;
+	border-color: none;
+	outline:0;
 }
 
 span {

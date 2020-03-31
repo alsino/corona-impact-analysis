@@ -10,7 +10,7 @@
 
 // ToDos
 // 1. Hook up controls to correct parameters
-// 2. Add remaining charts
+// 2. Add parameter section on bottom
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
@@ -18,6 +18,7 @@
 	import ChartSteps from './charts/chartSteps.svelte';
 	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
+	import { Tabs, TabList, TabPanel, Tab } from './tabs.js';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
 	import { dataLoaded } from './store.js';
@@ -117,13 +118,52 @@
 	</section>
 
 	<section id="controls">
-		<Control label={"Beginning"} small={false} end={false}/>
-		<Control label={"Policy Intervention 1"} small={false} end={false}/>
-		<Control label={"Policy Intervention 2"} small={false} end={false}/>
-		<Control label={"Policy Intervention 3"} small={false} end={false}/>
-		<Control label={"P_self_quarantine"} small={true} end={false}/>
-		<Control label={"End of simulation"} small={false} end={true}/>
+
+		<Tabs>
+		<TabList>
+			<Tab>Policy</Tab>
+			<Tab>Parameters</Tab>
+			<Tab>Starting values</Tab>
+		</TabList>
+
+		<TabPanel>
+			<div class="tab-wrapper">
+				<Control label={"Beginning"} small={false} end={false}/>
+				<Control label={"Policy Intervention 1"} small={false} end={false}/>
+				<Control label={"Policy Intervention 2"} small={false} end={false}/>
+				<Control label={"Policy Intervention 3"} small={false} end={false}/>
+				<Control label={"P_self_quarantine"} small={true} end={false}/>
+				<Control label={"End of simulation"} small={false} end={true}/>
+			</div>
+			
+		</TabPanel>
+
+		<TabPanel>
+			<div class="tab-wrapper">
+				<Control label={"Beginning"} small={false} end={false}/>
+				<Control label={"Policy Intervention 1"} small={false} end={false}/>
+				<Control label={"Policy Intervention 2"} small={false} end={false}/>
+				<Control label={"Policy Intervention 3"} small={false} end={false}/>
+				<Control label={"P_self_quarantine"} small={true} end={false}/>
+				<Control label={"End of simulation"} small={false} end={true}/>
+			</div>
+		</TabPanel>
+
+		<TabPanel>
+		<div class="tab-wrapper">
+				<Control label={"Beginning"} small={false} end={false}/>
+				<Control label={"Policy Intervention 1"} small={false} end={false}/>
+				<Control label={"Policy Intervention 2"} small={false} end={false}/>
+				<Control label={"Policy Intervention 3"} small={false} end={false}/>
+				<Control label={"P_self_quarantine"} small={true} end={false}/>
+				<Control label={"End of simulation"} small={false} end={true}/>
+			</div>
+		</TabPanel>
+	</Tabs>
+		
 	</section>
+
+
 
 </div>
 
@@ -156,6 +196,10 @@
 
 		#controls {
 			margin-top: 2em;
+
+			.tab-wrapper {
+				margin-top: 2em;
+			}
 		}
 	}
 
