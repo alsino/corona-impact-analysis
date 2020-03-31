@@ -1,6 +1,8 @@
 ## Intro
 
-A quick visualization for a corona impact analysis. A continous live demo can be found here: [https://quirky-mclean-bf617d.netlify.com/](https://quirky-mclean-bf617d.netlify.com/)
+A quick visualization for a corona impact analysis. 
+
+A continous live demo can be found here: [https://quirky-mclean-bf617d.netlify.com/](https://quirky-mclean-bf617d.netlify.com/)
 
 The App uses the framework [Svelte.js](http://svelte.dev/). You will find the JavaScript code in the ***src*** folder. The data can be found in the ***public*** folder. If you just need to make changes to the data or add new ***PDFs*** to the ***public/pdf folder***, you will not have to install anything. Simply update the folder on your server and repository. 
 
