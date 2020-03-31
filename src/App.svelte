@@ -18,6 +18,7 @@
 	import ChartSteps from './charts/chartSteps.svelte';
 	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
+	import Parameter from './Control.svelte';
 	import { Tabs, TabList, TabPanel, Tab } from './tabs.js';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
@@ -121,9 +122,9 @@
 
 		<Tabs>
 		<TabList>
-			<Tab>Policy</Tab>
-			<Tab>Parameters</Tab>
-			<Tab>Starting values</Tab>
+			<Tab>Policy Intervention</Tab>
+			<Tab>Model Parameters</Tab>
+			<Tab>Starting Values</Tab>
 		</TabList>
 
 		<TabPanel>
@@ -140,23 +141,14 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<!-- <Control label={"Beginning"} small={false} end={false}/>
-				<Control label={"Policy Intervention 1"} small={false} end={false}/>
-				<Control label={"Policy Intervention 2"} small={false} end={false}/>
-				<Control label={"Policy Intervention 3"} small={false} end={false}/>
-				<Control label={"P_self_quarantine"} small={true} end={false}/>
-				<Control label={"End of simulation"} small={false} end={true}/> -->
+				<Parameter id={1} label={"Beginning"} small={false} end={true}/>
+				
 			</div>
 		</TabPanel>
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<!-- <Control label={"Beginning"} small={false} end={false}/>
-				<Control label={"Policy Intervention 1"} small={false} end={false}/>
-				<Control label={"Policy Intervention 2"} small={false} end={false}/>
-				<Control label={"Policy Intervention 3"} small={false} end={false}/>
-				<Control label={"P_self_quarantine"} small={true} end={false}/>
-				<Control label={"End of simulation"} small={false} end={true}/> -->
+				
 			</div>
 		</TabPanel>
 	</Tabs>
