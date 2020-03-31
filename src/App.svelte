@@ -81,7 +81,7 @@
 
 	<section id="charts">
 		<div id="highlight">
-			<ChartLine id={"chart-0"} width={550} height={400}/>
+			<ChartLine id={"chart-0"} width={500} height={400}/>
 		</div>
 		<div id="multiple">
 			<div class="row">

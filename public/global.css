@@ -82,8 +82,7 @@ input {
 }
 
 .cChart {
-	display: inline-block;
-	/* margin: 20px; */
+	margin: 0 10px;
 }
 
 .chart .c3-grid .c3-xgrid-focus {
