@@ -15,7 +15,7 @@ WWIDTH < 640 ? CWIDTH = 320 : 550;
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
-    "Dead": "#00CBDB",
+    "HospitalizedExclICU": "#00CBDB",
     "ICU": "#FFBB00",
     "data1": "#6FA6B9"
 }

@@ -85,6 +85,12 @@ input {
 	margin: 0 10px;
 }
 
+.c3-ygrid-line line {
+	stroke: #e2e2e2;
+	stroke-dasharray: 3;
+}
+
+
 .chart .c3-grid .c3-xgrid-focus {
   visibility : hidden !important;
 }

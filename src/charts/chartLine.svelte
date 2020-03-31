@@ -21,8 +21,11 @@ function renderChart(timeOut){
 
     setTimeout(() => {
       let timeLine =  $dataset["time"];
-      let dead = $dataset["Dead"];
+      let HospitalizedExclICU = $dataset["HospitalizedExclICU"];
       let icu = $dataset["ICU"];
+      let icuCapacity = $dataset["IcuCapacity"];
+      let HospitalCapacity = $dataset["HospitalCapacity"];
+
 
       // console.log(timeLine)
 
@@ -35,9 +38,9 @@ function renderChart(timeOut){
         },
           data: {
             x: 'time',
-            columns: [timeLine, dead, icu],
+            columns: [timeLine, HospitalizedExclICU, icu],
             type: 'bar',
-            groups: [['Dead', 'ICU']],
+            groups: [['HospitalizedExclICU', 'ICU']],
             colors: COLORS
           },
           axis: {
@@ -50,7 +53,15 @@ function renderChart(timeOut){
         },
         point: {
             r: RPOINT
+        },
+        grid: {
+        y: {
+          lines: [
+            {value: icuCapacity[1], text: icuCapacity[0], position: 'start'},
+            {value: HospitalCapacity[1], text: HospitalCapacity[0], position: 'start'},
+          ]
         }
+    }
       });
     }, timeOut);
 
