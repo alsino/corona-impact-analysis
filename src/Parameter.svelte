@@ -7,8 +7,13 @@
 
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
+	import { onMount, beforeUpdate } from 'svelte';
 	let settings = $params;
+	let parameterNames = Object.keys(settings);
+	let parameterValues = Object.values(settings);
 	let API;
+
+	
 
 
 	function update(){
@@ -57,92 +62,25 @@
 		requestAPI(API);
 	}
 
+	onMount(async () => {
+		console.log(parameterNames);
+	});
+
 
 </script>
 
-{#if id == 1}
 
-	<div class="ctrl">
-			<div class="date">
-				<span>{label}</span>
-				<input type=text bind:value={settings.policy_period0} on:change={update}>
-			</div>
-			<div class="spacer"></div>
-			<div class="strength"></div>	
-	</div>
-
-{:else if id == 2}
-
+{#each parameterNames as par, i}
 	<div class="ctrl">
 		<div class="date">
-			<span>{label}</span>
-			<input type=text bind:value={settings.policy_period1} on:change={update}>
-		</div>
-		<div class="spacer"></div>
-
-		<div class="strength">
-			<span>Policy Strength</span>
+			<span>{par}</span>
 			<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
 			<span>{settings.policy_strength1}</span>
-		</div>	
-	</div>
-
-{:else if id == 3}
-
-	<div class="ctrl">
-		<div class="date">
-			<span>{label}</span>
-			<input type=text bind:value={settings.policy_period2} on:change={update}>
 		</div>
 		<div class="spacer"></div>
-
-		<div class="strength">
-			<span>Policy Strength</span>
-			<input type=range bind:value={settings.policy_strength2} min=0 max=1 step=0.1 on:change={update}>
-			<span>{settings.policy_strength2}</span>
-		</div>	
+		<div class="strength"></div>	
 	</div>
-
-{:else if id == 4}
-
-	<div class="ctrl">
-		<div class="date">
-			<span>{label}</span>
-			<input type=text bind:value={settings.policy_period3} on:change={update}>
-		</div>
-		<div class="spacer"></div>
-
-		<div class="strength">
-			<span>Policy Strength</span>
-			<input type=range bind:value={settings.policy_strength3} min=0 max=1 step=0.1 on:change={update}>
-			<span>{settings.policy_strength3}</span>
-		</div>	
-	</div>
-
-{:else if id == 5}
-
-	<div class="ctrl">
-		<div class="date date-small">
-			<span>{label}</span>
-			<input type=range bind:value={settings.p_self_quarantine} min=0 max=1 step=0.1 on:change={update}>
-			<span style="width: 21px;">{settings.p_self_quarantine}</span>
-		</div>
-	<div class="spacer"></div>
-	<div class="strength"></div>
-	</div>
-
-{:else if id == 6}
-
-	<div class="ctrl">
-		<div class="date">
-			<span>{label}</span>
-			<input type=text bind:value={settings.policy_period4} on:change={update}>
-		</div>
-		<div class="spacer"></div>
-		<div class="strength"></div>
-	</div>
-	
-{/if }
+{/each}
 
 
 <style type="text/scss">

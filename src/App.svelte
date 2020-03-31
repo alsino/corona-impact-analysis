@@ -18,7 +18,7 @@
 	import ChartSteps from './charts/chartSteps.svelte';
 	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
-	import Parameter from './Control.svelte';
+	import Parameter from './Parameter.svelte';
 	import { Tabs, TabList, TabPanel, Tab } from './tabs.js';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
@@ -142,7 +142,7 @@
 		<TabPanel>
 			<div class="tab-wrapper">
 				<Parameter id={1} label={"Beginning"} small={false} end={true}/>
-				
+
 			</div>
 		</TabPanel>
 
@@ -179,10 +179,7 @@
 				flex: 1;
 				// background: blue;
 
-				.row {
-					display: flex;
-					justify-content: space-between;
-				}
+			
 			}
 		}
 
