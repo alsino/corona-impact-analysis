@@ -24,8 +24,8 @@ import { formatTime } from '../store.js';
 import { formatYAxis } from '../store.js';
 let chart;
 
-function renderChart(timeOut){
 
+function renderChart(timeOut){
 
     setTimeout(() => {
       let timeLine =  $dataset["time"];

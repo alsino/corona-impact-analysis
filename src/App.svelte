@@ -104,15 +104,21 @@
 					width={CWIDTHSMALL} 
 					height={200} 
 					multiple={false} 
-					data1={"Currently_infected"} 
-					capacity={false} 
+					data1={"Currently_infected"}
+					data2={""}  
+					capacity={false}
+					capacity1={""} 
+					capacity2={""} 
 				/>
 				<ChartBar id={"chart-4"} 
 					width={CWIDTHSMALL} 
 					height={200} 
 					multiple={false} 
 					data1={"R_combined"} 
+					data2={""}  
 					capacity={false} 
+					capacity1={""} 
+					capacity2={""}
 				/>
 			</div>
 		</div>
@@ -128,18 +134,18 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Control id={1} label={"Beginning"} small={false} end={true}/>
-				<Control id={2} label={"Policy intervention 1"} small={false} end={true}/>
-				<Control id={3} label={"Policy intervention 2"} small={false} end={false}/>
-				<Control id={4} label={"Policy intervention 3"} small={false} end={false}/>
-				<Control id={5} label={"P_self_quarantine"} small={true} end={false}/>
-				<Control id={6} label={"End of simulation"} small={false} end={true}/>
+				<Control id={1} label={"Beginning"}/>
+				<Control id={2} label={"Policy intervention 1"}/>
+				<Control id={3} label={"Policy intervention 2"}/>
+				<Control id={4} label={"Policy intervention 3"}/>
+				<Control id={5} label={"P_self_quarantine"}/>
+				<Control id={6} label={"End of simulation"}/>
 			</div>
 		</TabPanel>
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Parameter id={1} label={"Beginning"} small={false} end={true}/>
+				<Parameter id={1} label={"Beginning"}/>
 			</div>
 		</TabPanel>		
 	</Tabs>
