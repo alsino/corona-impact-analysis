@@ -152,6 +152,10 @@
 	</Tabs>
 		
 	</section>
+	<section id="credits">
+		<div>Model and calculations: Max Ebert & Friedrich ??</div>
+		<div>Design and development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
+	</section>
 
 
 
@@ -185,11 +189,17 @@
 		}
 
 		#controls {
-			margin-top: 2em;
+			margin: 2em 0 4em 0;
 
 			.tab-wrapper {
 				margin-top: 2em;
 			}
+		}
+
+		#credits {
+			font-family: 'IBM Plex Mono';
+			font-size: 10px;
+			text-align: right;
 		}
 	}
 

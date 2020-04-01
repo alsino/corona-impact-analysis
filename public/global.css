@@ -221,6 +221,7 @@ input {
   border: 1px solid #e2e2e2;
   font-family: 'IBM Plex Mono';
 	font-size: 10px !important;
+	background-color: #fff;
 }
 
 .tooltip.top {
