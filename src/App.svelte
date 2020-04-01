@@ -173,6 +173,10 @@
 		#charts {
 			display: flex;
 
+			.cChart {
+				margin: 0 10px;
+			}
+
 			#highlight {
 				flex: 0.9;
 			}
@@ -211,13 +215,15 @@
 
 				.row {
 					flex-direction: column;
+
+					.cChart {
+						margin: 20px 0 !important;
+					}
 				}
 			}
 		}
 
-		.cChart {
-			margin: 0px;
-		}
+		
 	}
 
 </style>

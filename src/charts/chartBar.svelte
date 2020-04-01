@@ -18,7 +18,6 @@ import { onMount, beforeUpdate } from 'svelte';
 import { dataLoaded } from '../store.js';
 import { dataset } from '../store.js';
 import { COLORS } from '../store.js';
-import { CWIDTHBIG } from '../store.js';
 import { RPOINT } from '../store.js';
 import { formatBarchart } from '../store.js';
 import { formatTime} from '../store.js';

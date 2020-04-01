@@ -79,10 +79,6 @@ input {
 	margin-right: 20px;
 }
 
-.cChart {
-	margin: 0 10px;
-}
-
 .c3-ygrid-line line {
 	stroke: #e2e2e2;
 	/* stroke: #2c2c2c; */
