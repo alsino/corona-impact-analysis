@@ -187,7 +187,7 @@
 @media (max-width: 670px) {
 
 	.ctrl {
-		margin: 5px 0;
+		margin: 20px 0;
 		flex-direction: column;
 		align-items: flex-start;
 
@@ -195,11 +195,10 @@
 			font-size: 10px;
 		}
 
-		// input[type="range"] {
-		// 	padding: 0.4em 0 !important;
-		// 	width: 50px;
-		// 	margin-right: 5px;
-		// }
+		input[type="range"] {
+			width: 170px;
+			margin-right: 5px;
+		}
 
 		.date {
 			text-align: left;
