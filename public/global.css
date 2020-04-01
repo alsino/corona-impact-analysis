@@ -227,7 +227,7 @@ input {
   transition: opacity 150ms, visibility 150ms;
   border: 1px solid #e2e2e2;
   font-family: 'IBM Plex Mono' !important;
-	font-size: 10px !important;
+	font-size: 12px !important;
 	background: #fff !important;
 	border-radius: 0 !important;;
 }
