@@ -12,7 +12,7 @@
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
-	import Intro from './Intro.svelte';
+	import Header from './Header.svelte';
 	import ChartSteps from './charts/chartSteps.svelte';
 	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
@@ -79,7 +79,7 @@
 
 <div id="app">
 
-	<Intro/>
+	<Header/>
 
 	<section id="charts">
 		<div id="highlight">
