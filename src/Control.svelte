@@ -151,7 +151,7 @@
 
 	span {
 		font-family: 'IBM Plex Mono';
-		font-size: 12px !important;
+		font-size: 12px;
 		min-height: 20px;
   	display: inline-flex;
   	align-items: center;
@@ -188,6 +188,16 @@
 
 	.ctrl {
 		margin: 5px 0;
+
+		span {
+			font-size: 10px;
+		}
+
+		input[type="range"] {
+			padding: 0.4em 0 !important;
+			width: 50px;
+			margin-right: 5px;
+		}
 
 		.date {
 			text-align: left;
