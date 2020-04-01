@@ -150,7 +150,7 @@
 	
 	.ctrl-name {
 		margin-bottom: 20px;
-		border-bottom: 2px solid #888888;
+		border-bottom: 1px solid #e2e2e2;
   	padding: 0px 0 10px 0;
   	margin: 0 40px 20px 40px;
 
