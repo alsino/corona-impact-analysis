@@ -188,16 +188,17 @@
 
 	.ctrl {
 		margin: 5px 0;
+		flex-direction: column;
 
 		span {
 			font-size: 10px;
 		}
 
-		input[type="range"] {
-			padding: 0.4em 0 !important;
-			width: 50px;
-			margin-right: 5px;
-		}
+		// input[type="range"] {
+		// 	padding: 0.4em 0 !important;
+		// 	width: 50px;
+		// 	margin-right: 5px;
+		// }
 
 		.date {
 			text-align: left;
