@@ -3,7 +3,8 @@
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
 	import { params2 } from './store.js';
-	import { onMount, beforeUpdate } from 'svelte';
+	import SvelteTooltip from 'svelte-tooltip';
+
 	let settings = $params;
 	let API;
 	let general = params2[0]["General"];
@@ -60,10 +61,6 @@
 		requestAPI(API);
 	}
 
-	onMount(async () => {
-		console.log(incubation);
-	});
-
 
 </script>
 
@@ -72,16 +69,20 @@
 		<div class="ctrl-name">General</div>
 		{#each general as item, i}
 			<div class="date">
+			<SvelteTooltip tip={item.descr} top >
 				<span class="var-name">{item.name}</span>
-				<input 
-					type=range 
-					bind:value={settings[item.name]} 
-					min={item.min} 
-					max={item.max} 
-					step=0.01 
-					on:change={update}
-				>
+			</SvelteTooltip>
+			<input 
+				type=range 
+				bind:value={settings[item.name]} 
+				min={item.min} 
+				max={item.max} 
+				step=0.01 
+				on:change={update}
+			>
+			<SvelteTooltip tip={item.unit} top >
 				<span class="var-value">{settings[item.name]}</span>
+			</SvelteTooltip>
 			</div>
 		{/each}
 	</div>
@@ -90,16 +91,20 @@
 		<div class="ctrl-name">Incubation</div>
 		{#each incubation as item, i}
 			<div class="date">
+			<SvelteTooltip tip={item.descr} top >
 				<span class="var-name">{item.name}</span>
-				<input 
-					type=range 
-					bind:value={settings[item.name]} 
-					min={item.min} 
-					max={item.max} 
-					step=0.01 
-					on:change={update}
-				>
+			</SvelteTooltip>
+			<input 
+				type=range 
+				bind:value={settings[item.name]} 
+				min={item.min} 
+				max={item.max} 
+				step=0.01 
+				on:change={update}
+			>
+			<SvelteTooltip tip={item.unit} top >
 				<span class="var-value">{settings[item.name]}</span>
+			</SvelteTooltip>
 			</div>
 		{/each}
 	</div>
@@ -107,17 +112,21 @@
 	<div>
 		<div class="ctrl-name">Illness duration</div>
 		{#each duration as item, i}
-			<div class="date">
-				<span class="var-name">{item.name}</span>
-				<input 
-					type=range 
-					bind:value={settings[item.name]} 
-					min={item.min} 
-					max={item.max} 
-					step=0.01 
-					on:change={update}
-				>
+		<div class="date">
+			<SvelteTooltip tip={item.descr} top >
+				<span class="var-name">{item.alias}</span>
+			</SvelteTooltip>
+			<input 
+				type=range 
+				bind:value={settings[item.name]} 
+				min={item.min} 
+				max={item.max} 
+				step=0.01 
+				on:change={update}
+			>
+			<SvelteTooltip tip={item.unit} top >
 				<span class="var-value">{settings[item.name]}</span>
+			</SvelteTooltip>
 			</div>
 		{/each}
 	</div>
@@ -126,19 +135,27 @@
 		<div class="ctrl-name">Group sizes</div>
 		{#each groupSizes as item, i}
 			<div class="date">
+			<SvelteTooltip tip={item.descr} top >
 				<span class="var-name">{item.name}</span>
-				<input 
-					type=range 
-					bind:value={settings[item.name]} 
-					min={item.min} 
-					max={item.max} 
-					step=0.01 
-					on:change={update}
-				>
+			</SvelteTooltip>
+			<input 
+				type=range 
+				bind:value={settings[item.name]} 
+				min={item.min} 
+				max={item.max} 
+				step=0.01 
+				on:change={update}
+			>
+			<SvelteTooltip tip={item.unit} top >
 				<span class="var-value">{settings[item.name]}</span>
+			</SvelteTooltip>
 			</div>
 		{/each}
 	</div>
+
+	<!-- <SvelteTooltip tip="view on github" top >
+			<button>Click me</button>
+	</SvelteTooltip> -->
 	
 </div>
 

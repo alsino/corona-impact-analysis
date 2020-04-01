@@ -71,9 +71,10 @@ export let params2 = [
     {
     "descr": "R0",
     "name": "r0",
+    "alias": "r0",
     "min": 0,
     "max": 10,
-    "unit": "??",
+    "unit": "individuals infected on average",
     "group": "General"
     }
   ]
@@ -83,16 +84,18 @@ export let params2 = [
     {
       "descr": "Non-infectious incubation period",
       "name": "t_incubation",
+      "alias": "t_incubation",
       "min" : 0,
       "max" : 10,
-      "unit": "??"
+      "unit": "days"
     },
     {
       "descr": "Infectious incubation period",
       "name": "t_presymptomatic",
+      "alias": "t_presymptomatic",
       "min" : 0,
       "max" : 10,
-      "unit": "??"
+      "unit": "days"
     }
   ]
 },
@@ -101,20 +104,23 @@ export let params2 = [
     {
       "descr": "Illness duration asymptomatic course",
       "name": "t_recovery_asymptomatic",
+      "alias": "t_recov_asymp",
       "min" : 0,
       "max" : 30,
-      "unit": "??"
+      "unit": "days"
     },
     {
       "descr": "Illness duration mild course",
       "name": "t_recovery_mild",
+      "alias": "t_recovery_mild",
       "min" : 0,
       "max" : 30,
-      "unit": "??"
+      "unit": "days"
     },
     {
       "descr": "Illness duration severe course",
       "name": "t_home_severe",
+      "alias": "t_home_severe",
       "min" : 0,
       "max" : 30,
       "unit": "initial days at home"
@@ -122,6 +128,7 @@ export let params2 = [
     {
     "descr": "Illness duration severe course",
     "name": "t_hospital_severe_recovered",
+    "alias": "t_hosp_sev_rec",
     "min" : 0,
     "max" : 30,
     "unit": "days in hospital if recovered"
@@ -129,6 +136,7 @@ export let params2 = [
     {
     "descr": "Illness duration severe course",
     "name": "t_hospital_severe_deceased",
+    "alias": "t_hosp_sev_dec",
     "min" : 0,
     "max" : 30,
     "unit": "days in hospital if deceased"
@@ -140,23 +148,26 @@ export let params2 = [
     {
       "descr": "Fraction of individuals with asymptomatic course",
       "name": "p_asymptomatic",
+      "alias": "p_asymptomatic",
       "min" : 0,
       "max" : 1,
-      "unit": "??"
+      "unit": "share"
     },
     {
       "descr": "Fraction of individuals hospitalized / severe course",
       "name": "p_severe",
+      "alias": "p_severe",
       "min" : 0,
       "max" : 1,
-      "unit": "??"
+      "unit": "share"
     },
     {
       "descr": "Mortality rate",
       "name": "p_fatal",
+      "alias": "p_fatal",
       "min" : 0,
       "max" : 1,
-      "unit": "??"
+      "unit": "share"
     }
   ]
 }

@@ -24,6 +24,7 @@
     "rollup-plugin-json": "^4.0.0",
     "sass": "^1.26.3",
     "sirv-cli": "^0.4.4",
-    "svelte-preprocess": "^3.6.0"
+    "svelte-preprocess": "^3.6.0",
+    "svelte-tooltip": "^1.1.0"
   }
 }
