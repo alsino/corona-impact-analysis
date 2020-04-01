@@ -152,10 +152,11 @@
 	</Tabs>
 		
 	</section>
-	<section id="credits">
+
+	<!-- <section id="credits">
 		<div>Model and calculations: Max Ebert & Friedrich ??</div>
 		<div>Design and development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
-	</section>
+	</section> -->
 
 
 

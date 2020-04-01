@@ -191,7 +191,7 @@
 		align-items: flex-start;
 
 		input[type="range"] {
-			width: 170px;
+			width: 150px;
 			margin-right: 5px;
 		}
 
