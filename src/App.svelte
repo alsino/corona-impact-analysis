@@ -84,7 +84,7 @@
 	<section id="charts">
 		<div id="highlight">
 			<ChartBar id={"chart-0"} 
-				width={500} 
+				width={480} 
 				height={400} 
 				multiple={true} 
 				data1={"HospitalizedExclICU"} 
@@ -96,19 +96,19 @@
 		</div>
 		<div id="multiple">
 			<div class="row">
-				<ChartSteps id={"chart-1"} width={370} height={200} data={"Reduction in new infections through policy"}/>
-				<ChartSteps id={"chart-2"} width={370} height={200} data={"Hypothetical R0"}/>
+				<ChartSteps id={"chart-1"} width={380} height={200} data={"Reduction in new infections through policy"}/>
+				<ChartSteps id={"chart-2"} width={380} height={200} data={"Hypothetical R0"}/>
 			</div>
 			<div class="row">
 				<ChartBar id={"chart-3"} 
-					width={370} 
+					width={380} 
 					height={200} 
 					multiple={false} 
 					data1={"Currently_infected"} 
 					capacity={false} 
 				/>
 				<ChartBar id={"chart-4"} 
-					width={370} 
+					width={380} 
 					height={200} 
 					multiple={false} 
 					data1={"R_combined"} 
