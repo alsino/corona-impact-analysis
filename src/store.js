@@ -8,14 +8,18 @@ export const params = writable(undefined);
 export let WWIDTH = window.innerWidth;
 export let WHEIGHT = window.innerHeight;
 
-export let CWIDTHBIG = WWIDTH < 640 ? WWIDTH - 40 : 480;
-export let CWIDTHSMALL = WWIDTH < 640 ? WWIDTH - 40 : 380;
+export let CWIDTHBIG = WWIDTH < 640 ? WWIDTH - 40 : 460;
+export let CWIDTHSMALL = WWIDTH < 640 ? WWIDTH - 40 : 390;
 
 export const RPOINT = 2;
 
 export const formatBarchart = d3.format(".0f");
 export const formatStepchart = d3.format(".1f");
 export const formatTime = d3.timeFormat("%d %B %Y");
+export const formatYAxis = d3.format(",.0f");
+
+
+
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
@@ -186,5 +190,5 @@ export async function requestAPI(endpoint){
   dataLoaded.set(true);
   // console.log(dataLoaded);
   // console.log(res);
-  console.log(data);
+  // console.log(data);
 }

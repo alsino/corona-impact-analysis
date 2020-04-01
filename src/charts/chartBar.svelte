@@ -20,7 +20,8 @@ import { dataset } from '../store.js';
 import { COLORS } from '../store.js';
 import { RPOINT } from '../store.js';
 import { formatBarchart } from '../store.js';
-import { formatTime} from '../store.js';
+import { formatTime } from '../store.js';
+import { formatYAxis } from '../store.js';
 let chart;
 
 function renderChart(timeOut){
@@ -71,6 +72,11 @@ function renderChart(timeOut){
                 tick: {
                     format: "%b"
                 }
+            },
+            y : {
+              tick: {
+                format: function (d) { return formatYAxis(d) }
+              }
             } 
         },
         point: {

@@ -12,7 +12,7 @@
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
-	import Intro from './intro.svelte';
+	import Intro from './Intro.svelte';
 	import ChartSteps from './charts/chartSteps.svelte';
 	import ChartBar from './charts/chartBar.svelte';
 	import Control from './Control.svelte';
