@@ -204,9 +204,9 @@ input {
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: flex !important;;
+  align-items: center !important;;
+  justify-content: flex-end !important;;
 }
 
 .tooltip {
@@ -222,6 +222,7 @@ input {
   font-family: 'IBM Plex Mono' !important;
 	font-size: 10px !important;
 	background: #fff !important;
+	border-radius: 0 !important;;
 }
 
 .tooltip.top {
