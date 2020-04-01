@@ -13,8 +13,8 @@ export let CWIDTHSMALL = 300;
 
 export const RPOINT = 2;
 
-WWIDTH < 640 ? CWIDTHBIG = 350 : 480;
-WWIDTH < 640 ? CWIDTHSMALL = 350 : 380;
+WWIDTH < 640 ? CWIDTHBIG = 320 : 480;
+WWIDTH < 640 ? CWIDTHSMALL = 320 : 380;
 
 export const formatBarchart = d3.format(".0f");
 export const formatStepchart = d3.format(".1f");
@@ -180,97 +180,7 @@ export let params2 = [
 }
 ]
 
-// export let params2 = [
-//   {
-//   "descr": "R0",
-//   "name": "r0",
-//   "min": 0,
-//   "max": 10,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Non-infectious incubation period",
-//   "name": "t_incubation",
-//   "min" : 0,
-//   "max" : 10,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Infectious incubation period",
-//   "name": "t_presymptomatic",
-//   "min" : 0,
-//   "max" : 10,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Illness duration asymptomatic course",
-//   "name": "t_recovery_asymptomatic",
-//   "min" : 0,
-//   "max" : 30,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Illness duration mild course",
-//   "name": "t_recovery_mild",
-//   "min" : 0,
-//   "max" : 30,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Illness duration severe course",
-//   "name": "t_home_severe",
-//   "min" : 0,
-//   "max" : 30,
-//   "unit": "initial days at home"
-//   },
-//   {
-//   "descr": "Illness duration severe course",
-//   "name": "t_hospital_severe_recovered",
-//   "min" : 0,
-//   "max" : 30,
-//   "unit": "days in hospital if recovered"
-//   },
-//   {
-//   "descr": "Illness duration severe course",
-//   "name": "t_hospital_severe_deceased",
-//   "min" : 0,
-//   "max" : 30,
-//   "unit": "days in hospital if deceased"
-//   },
-//   {
-//   "descr": "Fraction of individuals with asymptomatic course",
-//   "name": "p_asymptomatic",
-//   "min" : 0,
-//   "max" : 1,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Fraction of individuals hospitalized / severe course",
-//   "name": "p_severe",
-//   "min" : 0,
-//   "max" : 1,
-//   "unit": "??"
-//   },
-//   {
-//   "descr": "Mortality rate",
-//   "name": "p_fatal",
-//   "min" : 0,
-//   "max" : 1,
-//   "unit": "??"
-//   },
-//   // {
-//   // "descr": "Size of population",
-//   // "name": "population_size",
-//   // "min" : 0,
-//   // "max" : 90000000,
-//   // "unit": "??"
-//   // }
-// ]
 
-
-
-
-	
 	
 export async function requestAPI(endpoint){
   const res = await fetch(endpoint);
@@ -281,20 +191,3 @@ export async function requestAPI(endpoint){
   // console.log(res);
   console.log(data);
 }
-
-// export async function getData(API_ENDPOINT){
-
-//   axios.get(API_ENDPOINT)
-//     .then(function (response) {
-//       // handle success
-//       dataset.set(response);
-//       // console.log(response);
-//     })
-//     .catch(function (error) {
-//       // handle error
-//       console.log(error);
-//     })
-//     .then(function (){
-//       dataLoaded.set(true)
-//     })
-// }
