@@ -154,7 +154,7 @@
 		font-size: 12px !important;
 		min-height: 20px;
   	display: inline-flex;
-  align-items: center;
+  	align-items: center;
 	}
 	
 	.date {
@@ -182,6 +182,18 @@
 		display: flex;
 		flex: 1;
 	}
+}
+
+@media (max-width: 670px) {
+
+	.ctrl {
+		margin: 5px 0;
+
+		.date {
+			text-align: left;
+		}
+	}
+
 }
 
 </style>
