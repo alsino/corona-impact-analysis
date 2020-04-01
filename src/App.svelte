@@ -23,6 +23,8 @@
 	import { params } from './store.js';
 	import { dataLoaded } from './store.js';
 	import { dataset } from './store.js';
+	import { CWIDTHBIG } from './store.js';
+	import { CWIDTHSMALL } from './store.js';
 
 	let settings = $params;
 	let data;
@@ -71,6 +73,7 @@
 	
 	onMount(async () => {
 		requestAPI(API);
+		console.log(CWIDTHBIG);
 	});
 
 
@@ -83,7 +86,7 @@
 	<section id="charts">
 		<div id="highlight">
 			<ChartBar id={"chart-0"} 
-				width={480} 
+				width={CWIDTHBIG} 
 				height={400} 
 				multiple={true} 
 				data1={"HospitalizedExclICU"} 
@@ -95,19 +98,19 @@
 		</div>
 		<div id="multiple">
 			<div class="row">
-				<ChartSteps id={"chart-1"} width={380} height={200} data={"Reduction in new infections through policy"}/>
-				<ChartSteps id={"chart-2"} width={380} height={200} data={"Hypothetical R0"}/>
+				<ChartSteps id={"chart-1"} width={CWIDTHSMALL} height={200} data={"Reduction in new infections through policy"}/>
+				<ChartSteps id={"chart-2"} width={CWIDTHSMALL} height={200} data={"Hypothetical R0"}/>
 			</div>
 			<div class="row">
 				<ChartBar id={"chart-3"} 
-					width={380} 
+					width={CWIDTHSMALL} 
 					height={200} 
 					multiple={false} 
 					data1={"Currently_infected"} 
 					capacity={false} 
 				/>
 				<ChartBar id={"chart-4"} 
-					width={380} 
+					width={CWIDTHSMALL} 
 					height={200} 
 					multiple={false} 
 					data1={"R_combined"} 
@@ -169,16 +172,13 @@
 
 		#charts {
 			display: flex;
-			// height: 400px;
 
 			#highlight {
 				flex: 0.9;
-				// background: red;
 			}
 
 			#multiple {
 				flex: 1;
-				// background: blue;
 
 				.row {
 					display: flex;
@@ -188,7 +188,7 @@
 		}
 
 		#controls {
-			margin: 2em 0 4em 0;
+			margin: 2em 0 3em 0;
 
 			.tab-wrapper {
 				margin-top: 2em;
@@ -205,6 +205,14 @@
 	@media (max-width: 640px) {
 		#app {
 			margin: 1em;
+
+			#charts {
+				flex-direction: column;
+
+				.row {
+					flex-direction: column;
+				}
+			}
 		}
 
 		.cChart {

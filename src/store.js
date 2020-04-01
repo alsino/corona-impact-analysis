@@ -8,11 +8,13 @@ export const params = writable(undefined);
 export let WWIDTH = window.innerWidth;
 export let WHEIGHT = window.innerHeight;
 
-export let CWIDTH = 300;
-export let CHEIGHT = 200;
+export let CWIDTHBIG = 300;
+export let CWIDTHSMALL = 300;
+
 export const RPOINT = 2;
 
-WWIDTH < 640 ? CWIDTH = 320 : 550;
+WWIDTH < 640 ? CWIDTHBIG = 350 : 480;
+WWIDTH < 640 ? CWIDTHSMALL = 350 : 380;
 
 export const formatBarchart = d3.format(".0f");
 export const formatStepchart = d3.format(".1f");
