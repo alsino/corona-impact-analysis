@@ -191,10 +191,6 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		// span {
-		// 	font-size: 10px;
-		// }
-
 		input[type="range"] {
 			width: 170px;
 			margin-right: 5px;

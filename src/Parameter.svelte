@@ -241,8 +241,17 @@
 		.ctrl-group {
 			margin: 30px 0;
 
+			input[type="range"] {
+				width: 170px;
+				margin-right: 5px;
+			}
+
 			.ctrl-name {
 				margin: 0;
+			}
+
+			.date {
+				margin-top: 5px;
 			}
 		}
 	}
