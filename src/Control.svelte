@@ -79,7 +79,7 @@
 		<div class="spacer"></div>
 
 		<div class="strength">
-			<span>Policy Strength</span>
+			<span>Policy strength</span>
 			<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength1}</span>
 		</div>	
@@ -95,7 +95,7 @@
 		<div class="spacer"></div>
 
 		<div class="strength">
-			<span>Policy Strength</span>
+			<span>Policy strength</span>
 			<input type=range bind:value={settings.policy_strength2} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength2}</span>
 		</div>	
@@ -111,7 +111,7 @@
 		<div class="spacer"></div>
 
 		<div class="strength">
-			<span>Policy Strength</span>
+			<span>Policy strength</span>
 			<input type=range bind:value={settings.policy_strength3} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength3}</span>
 		</div>	
