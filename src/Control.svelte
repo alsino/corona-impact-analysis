@@ -3,8 +3,10 @@
 	export let id;
 	export let label;
 
+	import SvelteTooltip from 'svelte-tooltip';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
+
 	let settings = $params;
 	let API;
 
@@ -73,7 +75,7 @@
 
 	<div class="ctrl">
 		<div class="date">
-			<span>{label}</span>
+			<span>{label}<span style="font-family:'IBM Plex Sans'; margin-right: 0;">*</span></span>
 			<input type=text bind:value={settings.policy_period1} on:change={update}>
 		</div>
 		<div class="spacer"></div>
@@ -89,7 +91,7 @@
 
 	<div class="ctrl">
 		<div class="date">
-			<span>{label}</span>
+			<span>{label}<span style="font-family:'IBM Plex Sans'; margin-right: 0;">*</span></span>
 			<input type=text bind:value={settings.policy_period2} on:change={update}>
 		</div>
 		<div class="spacer"></div>
@@ -105,7 +107,7 @@
 
 	<div class="ctrl">
 		<div class="date">
-			<span>{label}</span>
+			<span>{label}<span style="font-family:'IBM Plex Sans'; margin-right: 0;">*</span></span>
 			<input type=text bind:value={settings.policy_period3} on:change={update}>
 		</div>
 		<div class="spacer"></div>

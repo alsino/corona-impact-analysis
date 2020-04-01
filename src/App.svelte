@@ -140,6 +140,8 @@
 				<Control id={4} label={"Policy intervention 3"}/>
 				<Control id={5} label={"P_self_quarantine"}/>
 				<Control id={6} label={"End of simulation"}/>
+				<div class ="footnote">* Policy intervention 1-3: Percentage decrease in new infections per period, eg. through social distancing or fast testing and isolation</div>
+
 			</div>
 		</TabPanel>
 
@@ -163,7 +165,7 @@
 <style type="text/scss">
 
 	#app {
-		margin: 2em 6em 0 6em;
+		margin: 2em 6em 2em 6em;
 
 		#charts {
 			display: flex;
@@ -194,11 +196,21 @@
 			}
 		}
 
+		.footnote {
+			font-family: 'IBM Plex Mono';
+			font-size: 12px;
+			text-align: left;
+			margin-top: 5em;
+			width: 40%;
+		}
+
 		#credits {
 			font-family: 'IBM Plex Mono';
 			font-size: 10px;
 			text-align: right;
 		}
+
+
 	}
 
 	@media (max-width: 670px) {
