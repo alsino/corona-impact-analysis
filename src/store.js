@@ -11,9 +11,6 @@ export let WHEIGHT = window.innerHeight;
 export let CWIDTHBIG = WWIDTH < 640 ? WWIDTH - 40 : 480;
 export let CWIDTHSMALL = WWIDTH < 640 ? WWIDTH - 40 : 380;
 
-// export let CWIDTHBIG = WWIDTH < 640 ? 320 : 480;
-// export let CWIDTHSMALL = WWIDTH < 640 ? 320 : 380;
-
 export const RPOINT = 2;
 
 export const formatBarchart = d3.format(".0f");

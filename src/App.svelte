@@ -8,8 +8,7 @@
 // Update charts not per re-render but just data update
 
 // ToDos
-// 3. Mobile Responsiveness
-// 4. API key
+// API key
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';

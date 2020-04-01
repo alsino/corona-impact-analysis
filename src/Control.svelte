@@ -163,7 +163,6 @@
 	}
 
 	.date-small {
-
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -198,6 +197,7 @@
 
 		.date {
 			text-align: left;
+			display: inline-flex;
 		}
 	}
 
