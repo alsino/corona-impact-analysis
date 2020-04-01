@@ -11,9 +11,7 @@
 	let incubation = params2[1]["Incubation"];
 	let duration = params2[2]["Illness duration"];
 	let groupSizes = params2[3]["Group sizes"];
-
 	
-
 
 	function update(){
 

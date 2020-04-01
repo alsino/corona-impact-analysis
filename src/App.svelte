@@ -124,7 +124,6 @@
 		<TabList>
 			<Tab>Policy intervention</Tab>
 			<Tab>Model parameters</Tab>
-			<!-- <Tab>Starting Values</Tab> -->
 		</TabList>
 
 		<TabPanel>
@@ -142,13 +141,7 @@
 			<div class="tab-wrapper">
 				<Parameter id={1} label={"Beginning"} small={false} end={true}/>
 			</div>
-		</TabPanel>
-
-		<!-- <TabPanel>
-			<div class="tab-wrapper">
-			</div>
-		</TabPanel> -->
-		
+		</TabPanel>		
 	</Tabs>
 		
 	</section>
@@ -157,9 +150,6 @@
 		<div>Model and calculations: Max Ebert, Friedrich Geiecke, Wolfgang Ridinger</div>
 		<div>Design and development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
 	</section>
-
-
-
 </div>
 
 
@@ -217,8 +207,6 @@
 				}
 			}
 		}
-
-		
 	}
 
 </style>
