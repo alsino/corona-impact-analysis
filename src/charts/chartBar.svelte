@@ -26,7 +26,6 @@ let chart;
 
 
 function renderChart(timeOut){
-  
 
     setTimeout(() => {
       let timeLine =  $dataset["time"];
