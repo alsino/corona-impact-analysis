@@ -21,6 +21,7 @@ import { COLORS } from '../store.js';
 import { CWIDTH } from '../store.js';
 import { CHEIGHT } from '../store.js';
 import { RPOINT } from '../store.js';
+import { formatBarchart } from '../store.js';
 let chart;
 
 function renderChart(timeOut){
@@ -80,8 +81,15 @@ function renderChart(timeOut){
         y: {
           lines: lines
         }
-    }
-      });
+      },
+      tooltip: {
+        format: {
+            value: function (value, ratio, id) {
+                return formatBarchart(value);
+            }
+        }
+      }
+    });
     }, timeOut);
 
 };

@@ -1,4 +1,5 @@
 import { writable, readable, derived } from 'svelte/store';
+import * as d3 from "d3";
 
 export const dataLoaded = writable(false);
 export const dataset = writable(undefined);
@@ -12,6 +13,9 @@ export let CHEIGHT = 200;
 export const RPOINT = 2;
 
 WWIDTH < 640 ? CWIDTH = 320 : 550;
+
+export const formatBarchart = d3.format(".0f");
+export const formatStepchart = d3.format(".1f");
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',

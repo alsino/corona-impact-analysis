@@ -16,6 +16,7 @@ import { COLORS } from '../store.js';
 import { CWIDTH } from '../store.js';
 import { CHEIGHT } from '../store.js';
 import { RPOINT } from '../store.js';
+import { formatStepchart } from '../store.js';
 let chart;
 
 function renderChart(timeOut){
@@ -59,10 +60,14 @@ function renderChart(timeOut){
         },
         point: {
             r: RPOINT
-        } 
-        // legend: {
-        //   position: 'inset'
-        // }
+        },
+        tooltip: {
+          format: {
+              value: function (value, ratio, id) {
+                  return formatStepchart(value);
+              }
+          }
+        }
       });
 
     }, timeOut);
