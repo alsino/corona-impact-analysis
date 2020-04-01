@@ -196,8 +196,7 @@
 
 	span {
 		font-family: 'IBM Plex Mono';
-		font-size: 10px !important;
-  	// display: inline-flex;
+		font-size: 12px !important;
 		align-items: center;
 		flex: 1;
 
