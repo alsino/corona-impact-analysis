@@ -16,6 +16,7 @@ WWIDTH < 640 ? CWIDTH = 320 : 550;
 
 export const formatBarchart = d3.format(".0f");
 export const formatStepchart = d3.format(".1f");
+export const formatTime = d3.timeFormat("%d %B %Y");
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',

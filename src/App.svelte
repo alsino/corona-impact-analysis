@@ -8,7 +8,6 @@
 // Update charts not per re-render but just data update
 
 // ToDos
-// 2. Tooltip values round
 // 3. Mobile Responsiveness
 // 4. API key
 

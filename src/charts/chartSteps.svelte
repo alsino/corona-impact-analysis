@@ -17,6 +17,7 @@ import { CWIDTH } from '../store.js';
 import { CHEIGHT } from '../store.js';
 import { RPOINT } from '../store.js';
 import { formatStepchart } from '../store.js';
+import { formatTime} from '../store.js';
 let chart;
 
 function renderChart(timeOut){
@@ -63,6 +64,7 @@ function renderChart(timeOut){
         },
         tooltip: {
           format: {
+              title: function (d) { return formatTime(d) },
               value: function (value, ratio, id) {
                   return formatStepchart(value);
               }
