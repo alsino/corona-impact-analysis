@@ -191,9 +191,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		span {
-			font-size: 10px;
-		}
+		// span {
+		// 	font-size: 10px;
+		// }
 
 		input[type="range"] {
 			width: 170px;

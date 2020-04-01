@@ -65,7 +65,7 @@
 </script>
 
 <div class="ctrl">
-	<div>
+	<div class="ctrl-group">
 		<div class="ctrl-name">General</div>
 		{#each general as item, i}
 			<div class="date">
@@ -87,7 +87,7 @@
 		{/each}
 	</div>
 
-	<div>
+	<div class="ctrl-group">
 		<div class="ctrl-name">Incubation</div>
 		{#each incubation as item, i}
 			<div class="date">
@@ -109,7 +109,7 @@
 		{/each}
 	</div>
 
-	<div>
+	<div class="ctrl-group">
 		<div class="ctrl-name">Illness duration</div>
 		{#each duration as item, i}
 		<div class="date">
@@ -131,7 +131,7 @@
 		{/each}
 	</div>
 
-	<div>
+	<div class="ctrl-group">
 		<div class="ctrl-name">Group sizes</div>
 		{#each groupSizes as item, i}
 			<div class="date">
@@ -171,7 +171,6 @@
   	padding: 0px 0 10px 0;
 		margin: 0 40px 20px 40px;
 		font-weight: 600;
-
 	}
 
 	div {
@@ -234,6 +233,20 @@
 		flex: 1;
 	}
 }
+
+@media (max-width: 670px) {
+	.ctrl {
+		display: block !important;
+
+		.ctrl-group {
+			margin: 30px 0;
+
+			.ctrl-name {
+				margin: 0;
+			}
+		}
+	}
+}	
 
 </style>
 
