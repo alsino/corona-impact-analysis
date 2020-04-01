@@ -1,5 +1,4 @@
 <script>
-
 // Inspiration: http://gabgoh.github.io/COVID/
 // Current: https://covid19-simulation.herokuapp.com/
 // Svelte tabs: https://svelte.dev/repl/8e68120858e5322272dc9136c4bb79cc?version=3.5.1
@@ -9,7 +8,6 @@
 // Update charts not per re-render but just data update
 
 // ToDos
-// 1. Group parameters (https://svelte.dev/repl/118b7d4540c64f8491d10a24e68948d7?version=3.12.1)
 // 2. Tooltiop values round
 // 3. Mobile Responsiveness
 // 4. API key
@@ -124,8 +122,8 @@
 
 		<Tabs>
 		<TabList>
-			<Tab>Policy Intervention</Tab>
-			<Tab>Model Parameters</Tab>
+			<Tab>Policy intervention</Tab>
+			<Tab>Model parameters</Tab>
 			<!-- <Tab>Starting Values</Tab> -->
 		</TabList>
 
