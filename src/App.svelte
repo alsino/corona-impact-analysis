@@ -73,7 +73,6 @@
 	
 	onMount(async () => {
 		requestAPI(API);
-		console.log(CWIDTHBIG);
 	});
 
 
@@ -206,7 +205,7 @@
 		}
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 670px) {
 		#app {
 			margin: 1em;
 
@@ -215,10 +214,6 @@
 
 				.row {
 					flex-direction: column;
-
-					.cChart {
-						margin: 20px 0 !important;
-					}
 				}
 			}
 		}

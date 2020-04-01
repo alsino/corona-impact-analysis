@@ -79,6 +79,16 @@ input {
 	margin-right: 20px;
 }
 
+.cChart {
+	margin: 10px;
+}
+
+@media (max-width: 670px) {
+  .cChart {
+    margin: 10px 0;
+  }
+}
+
 .c3-ygrid-line line {
 	stroke: #e2e2e2;
 	/* stroke: #2c2c2c; */
