@@ -153,10 +153,10 @@
 		
 	</section>
 
-	<!-- <section id="credits">
-		<div>Model and calculations: Max Ebert & Friedrich ??</div>
+	<section id="credits">
+		<div>Model and calculations: Max Ebert, Friedrich Geiecke, Wolfgang Ridinger</div>
 		<div>Design and development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
-	</section> -->
+	</section>
 
 
 
