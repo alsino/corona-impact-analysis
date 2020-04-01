@@ -189,6 +189,7 @@
 	.ctrl {
 		margin: 5px 0;
 		flex-direction: column;
+		align-items: flex-start;
 
 		span {
 			font-size: 10px;
