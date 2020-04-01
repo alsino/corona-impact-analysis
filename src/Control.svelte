@@ -2,8 +2,6 @@
 
 	export let id;
 	export let label;
-	export let small;
-	export let end;
 
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
@@ -82,7 +80,7 @@
 
 		<div class="strength">
 			<span>Policy Strength</span>
-			<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.1 on:change={update}>
+			<input type=range bind:value={settings.policy_strength1} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength1}</span>
 		</div>	
 	</div>
@@ -98,7 +96,7 @@
 
 		<div class="strength">
 			<span>Policy Strength</span>
-			<input type=range bind:value={settings.policy_strength2} min=0 max=1 step=0.1 on:change={update}>
+			<input type=range bind:value={settings.policy_strength2} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength2}</span>
 		</div>	
 	</div>
@@ -114,7 +112,7 @@
 
 		<div class="strength">
 			<span>Policy Strength</span>
-			<input type=range bind:value={settings.policy_strength3} min=0 max=1 step=0.1 on:change={update}>
+			<input type=range bind:value={settings.policy_strength3} min=0 max=1 step=0.01 on:change={update}>
 			<span>{settings.policy_strength3}</span>
 		</div>	
 	</div>
@@ -124,7 +122,7 @@
 	<div class="ctrl">
 		<div class="date date-small">
 			<span>{label}</span>
-			<input type=range bind:value={settings.p_self_quarantine} min=0 max=1 step=0.1 on:change={update}>
+			<input type=range bind:value={settings.p_self_quarantine} min=0 max=1 step=0.01 on:change={update}>
 			<span style="width: 21px;">{settings.p_self_quarantine}</span>
 		</div>
 	<div class="spacer"></div>

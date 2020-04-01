@@ -64,74 +64,190 @@ params.set({
   "Hypothetical%20R0": 2.4
 });
 
+
 export let params2 = [
-  {
-  "descr": "R0",
-  "name": "r0",
-  "min": 0,
-  "max": 10,
-  },
-  {
-  "descr": "Non-infectious incubation period",
-  "name": "t_incubation",
-  "min" : 0,
-  "max" : 10,
-  },
-  {
-  "descr": "Infectious incubation period",
-  "name": "t_presymptomatic",
-  "min" : 0,
-  "max" : 10,
-  },
-  {
-  "descr": "Illness duration asymptomatic course",
-  "name": "t_recovery_asymptomatic",
-  "min" : 0,
-  "max" : 30,
-  },
-  {
-  "descr": "Illness duration mild course",
-  "name": "t_recovery_mild",
-  "min" : 0,
-  "max" : 30,
-  },
-  {
-  "descr": "Illness duration severe course - initial days at home",
-  "name": "t_home_severe",
-  "min" : 0,
-  "max" : 30,
-  },
-  {
-  "descr": "Illness duration severe course - days in hospital if recovered",
-  "name": "t_hospital_severe_recovered",
-  "min" : 0,
-  "max" : 30,
-  },
-  {
-  "descr": "Illness duration severe course - days in hospital if deceased",
-  "name": "t_hospital_severe_deceased",
-  "min" : 0,
-  "max" : 30,
-  },
-  {
-  "descr": "Fraction of individuals with asymptomatic course",
-  "name": "p_asymptomatic",
-  "min" : 0,
-  "max" : 1,
-  },
-  {
-  "descr": "Fraction of individuals hospitalized / severe course",
-  "name": "p_severe",
-  "min" : 0,
-  "max" : 1,
-  },
-  {
-  "descr": "Mortality rate",
-  "name": "p_fatal",
-  "min" : 0,
-  "max" : 1,
-  }
+{
+  "General": [
+    {
+    "descr": "R0",
+    "name": "r0",
+    "min": 0,
+    "max": 10,
+    "unit": "??",
+    "group": "General"
+    }
+  ]
+},
+{
+  "Incubation": [
+    {
+      "descr": "Non-infectious incubation period",
+      "name": "t_incubation",
+      "min" : 0,
+      "max" : 10,
+      "unit": "??"
+    },
+    {
+      "descr": "Infectious incubation period",
+      "name": "t_presymptomatic",
+      "min" : 0,
+      "max" : 10,
+      "unit": "??"
+    }
+  ]
+},
+{
+  "Illness duration": [
+    {
+      "descr": "Illness duration asymptomatic course",
+      "name": "t_recovery_asymptomatic",
+      "min" : 0,
+      "max" : 30,
+      "unit": "??"
+    },
+    {
+      "descr": "Illness duration mild course",
+      "name": "t_recovery_mild",
+      "min" : 0,
+      "max" : 30,
+      "unit": "??"
+    },
+    {
+      "descr": "Illness duration severe course",
+      "name": "t_home_severe",
+      "min" : 0,
+      "max" : 30,
+      "unit": "initial days at home"
+    },
+    {
+    "descr": "Illness duration severe course",
+    "name": "t_hospital_severe_recovered",
+    "min" : 0,
+    "max" : 30,
+    "unit": "days in hospital if recovered"
+    },
+    {
+    "descr": "Illness duration severe course",
+    "name": "t_hospital_severe_deceased",
+    "min" : 0,
+    "max" : 30,
+    "unit": "days in hospital if deceased"
+    }
+  ]
+},
+{
+  "Group sizes" : [
+    {
+      "descr": "Fraction of individuals with asymptomatic course",
+      "name": "p_asymptomatic",
+      "min" : 0,
+      "max" : 1,
+      "unit": "??"
+    },
+    {
+      "descr": "Fraction of individuals hospitalized / severe course",
+      "name": "p_severe",
+      "min" : 0,
+      "max" : 1,
+      "unit": "??"
+    },
+    {
+      "descr": "Mortality rate",
+      "name": "p_fatal",
+      "min" : 0,
+      "max" : 1,
+      "unit": "??"
+    }
+  ]
+}
 ]
+
+// export let params2 = [
+//   {
+//   "descr": "R0",
+//   "name": "r0",
+//   "min": 0,
+//   "max": 10,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Non-infectious incubation period",
+//   "name": "t_incubation",
+//   "min" : 0,
+//   "max" : 10,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Infectious incubation period",
+//   "name": "t_presymptomatic",
+//   "min" : 0,
+//   "max" : 10,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Illness duration asymptomatic course",
+//   "name": "t_recovery_asymptomatic",
+//   "min" : 0,
+//   "max" : 30,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Illness duration mild course",
+//   "name": "t_recovery_mild",
+//   "min" : 0,
+//   "max" : 30,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Illness duration severe course",
+//   "name": "t_home_severe",
+//   "min" : 0,
+//   "max" : 30,
+//   "unit": "initial days at home"
+//   },
+//   {
+//   "descr": "Illness duration severe course",
+//   "name": "t_hospital_severe_recovered",
+//   "min" : 0,
+//   "max" : 30,
+//   "unit": "days in hospital if recovered"
+//   },
+//   {
+//   "descr": "Illness duration severe course",
+//   "name": "t_hospital_severe_deceased",
+//   "min" : 0,
+//   "max" : 30,
+//   "unit": "days in hospital if deceased"
+//   },
+//   {
+//   "descr": "Fraction of individuals with asymptomatic course",
+//   "name": "p_asymptomatic",
+//   "min" : 0,
+//   "max" : 1,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Fraction of individuals hospitalized / severe course",
+//   "name": "p_severe",
+//   "min" : 0,
+//   "max" : 1,
+//   "unit": "??"
+//   },
+//   {
+//   "descr": "Mortality rate",
+//   "name": "p_fatal",
+//   "min" : 0,
+//   "max" : 1,
+//   "unit": "??"
+//   },
+//   // {
+//   // "descr": "Size of population",
+//   // "name": "population_size",
+//   // "min" : 0,
+//   // "max" : 90000000,
+//   // "unit": "??"
+//   // }
+// ]
 
 
 

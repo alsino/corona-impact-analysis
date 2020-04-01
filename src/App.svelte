@@ -9,8 +9,10 @@
 // Update charts not per re-render but just data update
 
 // ToDos
-// 1. Add parameter section on bottom
-// 2. Mobile Responsiveness
+// 1. Group parameters (https://svelte.dev/repl/118b7d4540c64f8491d10a24e68948d7?version=3.12.1)
+// 2. Tooltiop values round
+// 3. Mobile Responsiveness
+// 4. API key
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
@@ -124,7 +126,7 @@
 		<TabList>
 			<Tab>Policy Intervention</Tab>
 			<Tab>Model Parameters</Tab>
-			<Tab>Starting Values</Tab>
+			<!-- <Tab>Starting Values</Tab> -->
 		</TabList>
 
 		<TabPanel>
@@ -136,21 +138,19 @@
 				<Control id={5} label={"P_self_quarantine"} small={true} end={false}/>
 				<Control id={6} label={"End of simulation"} small={false} end={true}/>
 			</div>
-			
 		</TabPanel>
 
 		<TabPanel>
 			<div class="tab-wrapper">
 				<Parameter id={1} label={"Beginning"} small={false} end={true}/>
-
 			</div>
 		</TabPanel>
 
-		<TabPanel>
+		<!-- <TabPanel>
 			<div class="tab-wrapper">
-				
 			</div>
-		</TabPanel>
+		</TabPanel> -->
+		
 	</Tabs>
 		
 	</section>

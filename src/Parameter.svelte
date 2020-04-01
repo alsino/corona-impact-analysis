@@ -6,6 +6,10 @@
 	import { onMount, beforeUpdate } from 'svelte';
 	let settings = $params;
 	let API;
+	let general = params2[0]["General"];
+	let incubation = params2[1]["Incubation"];
+	let duration = params2[2]["Illness duration"];
+	let groupSizes = params2[3]["Group sizes"];
 
 	
 
@@ -57,40 +61,125 @@
 	}
 
 	onMount(async () => {
-		console.log(params2[0]);
+		console.log(incubation);
 	});
 
 
 </script>
 
-{#each params2 as par, i}
-	<div class="ctrl">
-		<div class="date">
-			<span>{par.descr} ({par.name})</span>
-			<input 
-				type=range 
-				bind:value={settings[par.name]} 
-				min={par.min} 
-				max={par.max} 
-				step=0.1 
-				on:change={update}
-			>
-			<span>{settings[par.name]}</span>
-		</div>
+<div class="ctrl">
+	<div>
+		<div class="ctrl-name">General</div>
+		{#each general as item, i}
+			<div class="date">
+				<span class="var-name">{item.name}</span>
+				<input 
+					type=range 
+					bind:value={settings[item.name]} 
+					min={item.min} 
+					max={item.max} 
+					step=0.01 
+					on:change={update}
+				>
+				<span class="var-value">{settings[item.name]}</span>
+			</div>
+		{/each}
 	</div>
-{/each}
+
+	<div>
+		<div class="ctrl-name">Incubation</div>
+		{#each incubation as item, i}
+			<div class="date">
+				<span class="var-name">{item.name}</span>
+				<input 
+					type=range 
+					bind:value={settings[item.name]} 
+					min={item.min} 
+					max={item.max} 
+					step=0.01 
+					on:change={update}
+				>
+				<span class="var-value">{settings[item.name]}</span>
+			</div>
+		{/each}
+	</div>
+
+	<div>
+		<div class="ctrl-name">Illness duration</div>
+		{#each duration as item, i}
+			<div class="date">
+				<span class="var-name">{item.name}</span>
+				<input 
+					type=range 
+					bind:value={settings[item.name]} 
+					min={item.min} 
+					max={item.max} 
+					step=0.01 
+					on:change={update}
+				>
+				<span class="var-value">{settings[item.name]}</span>
+			</div>
+		{/each}
+	</div>
+
+	<div>
+		<div class="ctrl-name">Group sizes</div>
+		{#each groupSizes as item, i}
+			<div class="date">
+				<span class="var-name">{item.name}</span>
+				<input 
+					type=range 
+					bind:value={settings[item.name]} 
+					min={item.min} 
+					max={item.max} 
+					step=0.01 
+					on:change={update}
+				>
+				<span class="var-value">{settings[item.name]}</span>
+			</div>
+		{/each}
+	</div>
+	
+</div>
 
 
 <style type="text/scss">
 
 .ctrl {
 	display: flex;
-	align-items: center;
+	
+	.ctrl-name {
+		margin-bottom: 20px;
+		border-bottom: 2px solid #888888;
+  	padding: 0px 0 10px 0;
+  	margin: 0 40px 20px 40px;
+
+	}
+
+	div {
+		flex: 1;
+		text-align: center;
+	}
+
+	.var-name {
+		
+		min-width: 120px;
+		display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	} 
+
+	.var-value {
+		display: flex;
+    align-items: center;
+		justify-content: flex-start;
+		flex: 1;
+		margin: 0;
+	} 
 
 	span {
 		font-family: 'IBM Plex Mono';
-		font-size: 12px !important;
-		min-height: 20px;
+		font-size: 10px !important;
   	// display: inline-flex;
 		align-items: center;
 		flex: 1;
