@@ -195,7 +195,7 @@ export async function requestAPI(endpoint){
   const res = await fetch(endpoint, requestOptions)
     .then(response => response.json())
     .then(function(data) {
-      console.log(data);
+      // console.log(data);
       dataset.set(data);
       dataLoaded.set(true);
     })
