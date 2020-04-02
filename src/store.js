@@ -18,6 +18,8 @@ export const formatStepchart = d3.format(".1f");
 export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
+const API_KEY = process.env.API_KEY;
+
 export const API_ENDPOINT = "https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?";
 
 export const COLORS = {
@@ -188,7 +190,7 @@ export async function requestAPI(endpoint){
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      "X-API-KEY": "klNdVBwgIAKqwwofBPiF0Q",
+      "X-API-KEY": API_KEY,
     }
   };
   

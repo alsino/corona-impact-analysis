@@ -7,7 +7,8 @@ import autoPreprocess from 'svelte-preprocess';
 import css from "rollup-plugin-css-only";
 import json from 'rollup-plugin-json';
 import rollup_start_dev from './rollup_start_dev';
-
+import {config} from 'dotenv';
+import replace from '@rollup/plugin-replace';
 
 
 const production = !process.env.ROLLUP_WATCH;
@@ -33,6 +34,15 @@ export default {
 			},
 			preprocess: autoPreprocess()
 		}),
+		replace({
+      // stringify the object
+      process: JSON.stringify({
+        env: {
+          isProd: production,
+          ...config().parsed // attached the .env config
+        }
+      }),
+    }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
