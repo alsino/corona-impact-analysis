@@ -170,9 +170,14 @@
 	</section>
 
 	<section id="credits">
-		<div>Model & calculations: Maximilian Eber, Friedrich Geiecke, Wolfgang Ridinger</div>
+		<div>
+			<a href="https://github.com/maximilianeber/covid">Model & calculations</a>: 
+			<a href="https://github.com/maximilianeber">Maximilian Eber</a>, 
+			<a href="https://sites.google.com/view/friedrichgeiecke/">Friedrich Geiecke</a>, 
+			<a href="http://www.lse.ac.uk/economics/phd-job-market/job-market-candidates/wolfgang-ridinger">Wolfgang Ridinger</a>
+		</div>
 		<div>In collaboration with: Dominic Ponattu (BMF)</div>
-		<div>Design & development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
+		<div>Design & development: <a target="_blank" href="https://alsino.io/">Alsino Skowronnek</a></div>
 	</section>
 </div>
 

@@ -1,6 +1,16 @@
 <section id="intro">
       <h2 id="intro-heading">Corona Impact Analysis - Dashboard</h2>
       <div id="intro-text">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+        <p>
+        This tool visualizes the impact of varying policy paths on the dynamics of an epidemic. 
+        You can adjust the duration and strength of policy interventions (social distancing, test-trace-quarantine) using the date fields and sliders below the graphs. 
+        The underlying simulation is based on a modified <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model">SEIR model</a>. 
+        It is roughly calibrated to match Germany's experience with Covid-19. 
+        For details, please refer to the <a href="https://github.com/maximilianeber/covid">code</a>. 
+        </p>
+        
+        <p>
+        Don't take the model too seriously - it is not a forecasting tool. We built it to illustrate why keeping the number of infections low is crucial even in the medium-term. 
+        </p>
       </div>
 </section>
