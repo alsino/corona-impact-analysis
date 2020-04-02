@@ -30,8 +30,6 @@
 	let settings = $params;
 	let data;
 
-	const apiUrl = process.env.API_ENDPOINT
-
 	let API= `${API_ENDPOINT}
 		policy_period0=${settings.policy_period0}&
 		policy_period1=${settings.policy_period1}&
@@ -74,9 +72,8 @@
 		Hypothetical%20R0=${settings["Hypothetical%20R0"]}`
 
 	
-	onMount(async () => {
-		console.log(apiUrl);
-	});
+	// onMount(async () => {
+	// });
 
 	beforeUpdate(() => {
 		requestAPI(API);

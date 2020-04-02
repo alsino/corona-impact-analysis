@@ -1,4 +1,4 @@
-import { writable, readable, derived } from 'svelte/store';
+import { writable } from 'svelte/store';
 import * as d3 from "d3";
 
 export const dataset = writable(undefined);
@@ -19,8 +19,8 @@ export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
 const API_KEY = process.env.API_KEY;
+export const API_ENDPOINT = process.env.API_URL;
 
-export const API_ENDPOINT = "https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?";
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
