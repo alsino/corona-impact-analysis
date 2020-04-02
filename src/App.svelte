@@ -94,48 +94,50 @@
 		<div class="loader"></div>
 	{/if}
 
-	<section id="charts">
-		<div id="highlight">
-			<ChartBar id={"chart-0"} 
-				width={CWIDTHBIG} 
-				height={400} 
-				multiple={true} 
-				data1={"HospitalizedExclICU"} 
-				data2={"ICU"} 
-				capacity={true} 
-				capacity1={"IcuCapacity"} 
-				capacity2={"HospitalCapacity"}
-			/>
-		</div>
-		<div id="multiple">
-			<div class="row">
-				<ChartSteps id={"chart-1"} width={CWIDTHSMALL} height={200} data={"Reduction in new infections through policy"}/>
-				<ChartSteps id={"chart-2"} width={CWIDTHSMALL} height={200} data={"Hypothetical R0"}/>
-			</div>
-			<div class="row">
-				<ChartBar id={"chart-3"} 
-					width={CWIDTHSMALL} 
-					height={200} 
-					multiple={false} 
-					data1={"Currently_infected"}
-					data2={""}  
-					capacity={false}
-					capacity1={""} 
-					capacity2={""} 
-				/>
-				<ChartBar id={"chart-4"} 
-					width={CWIDTHSMALL} 
-					height={200} 
-					multiple={false} 
-					data1={"R_combined"} 
-					data2={""}  
-					capacity={false} 
-					capacity1={""} 
-					capacity2={""}
+	{#if $dataLoaded}
+		<section id="charts">
+			<div id="highlight">
+				<ChartBar id={"chart-0"} 
+					width={CWIDTHBIG} 
+					height={400} 
+					multiple={true} 
+					data1={"HospitalizedExclICU"} 
+					data2={"ICU"} 
+					capacity={true} 
+					capacity1={"IcuCapacity"} 
+					capacity2={"HospitalCapacity"}
 				/>
 			</div>
-		</div>
-	</section>
+			<div id="multiple">
+				<div class="row">
+					<ChartSteps id={"chart-1"} width={CWIDTHSMALL} height={200} data={"Reduction in new infections through policy"}/>
+					<ChartSteps id={"chart-2"} width={CWIDTHSMALL} height={200} data={"Hypothetical R0"}/>
+				</div>
+				<div class="row">
+					<ChartBar id={"chart-3"} 
+						width={CWIDTHSMALL} 
+						height={200} 
+						multiple={false} 
+						data1={"Currently_infected"}
+						data2={""}  
+						capacity={false}
+						capacity1={""} 
+						capacity2={""} 
+					/>
+					<ChartBar id={"chart-4"} 
+						width={CWIDTHSMALL} 
+						height={200} 
+						multiple={false} 
+						data1={"R_combined"} 
+						data2={""}  
+						capacity={false} 
+						capacity1={""} 
+						capacity2={""}
+					/>
+				</div>
+			</div>
+		</section>
+	{/if}	
 
 	<section id="controls">
 
