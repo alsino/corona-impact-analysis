@@ -71,9 +71,6 @@
 		Dead=${settings.Dead}&
 		Hypothetical%20R0=${settings["Hypothetical%20R0"]}`
 
-	
-	// onMount(async () => {
-	// });
 
 	beforeUpdate(() => {
 		requestAPI(API);
