@@ -92,7 +92,7 @@ export let params2 = [
       "descr": "Non-infectious incubation period",
       "name": "t_incubation",
       "alias": "t_incubation",
-      "min" : 0,
+      "min" : 0.01,
       "max" : 10,
       "unit": "days"
     },
@@ -100,7 +100,7 @@ export let params2 = [
       "descr": "Infectious incubation period",
       "name": "t_presymptomatic",
       "alias": "t_presymptomatic",
-      "min" : 0,
+      "min" : 0.01,
       "max" : 10,
       "unit": "days"
     }
@@ -112,7 +112,7 @@ export let params2 = [
       "descr": "Illness duration asymptomatic course",
       "name": "t_recovery_asymptomatic",
       "alias": "t_recov_asymp",
-      "min" : 0,
+      "min" : 1,
       "max" : 30,
       "unit": "days"
     },
@@ -120,7 +120,7 @@ export let params2 = [
       "descr": "Illness duration mild course",
       "name": "t_recovery_mild",
       "alias": "t_recovery_mild",
-      "min" : 0,
+      "min" : 1,
       "max" : 30,
       "unit": "days"
     },
@@ -128,7 +128,7 @@ export let params2 = [
       "descr": "Illness duration severe course",
       "name": "t_home_severe",
       "alias": "t_home_severe",
-      "min" : 0,
+      "min" : 1,
       "max" : 30,
       "unit": "initial days at home"
     },
@@ -136,7 +136,7 @@ export let params2 = [
     "descr": "Illness duration severe course",
     "name": "t_hospital_severe_recovered",
     "alias": "t_hosp_sev_rec",
-    "min" : 0,
+    "min" : 0.01,
     "max" : 30,
     "unit": "days in hospital if recovered"
     },
@@ -144,7 +144,7 @@ export let params2 = [
     "descr": "Illness duration severe course",
     "name": "t_hospital_severe_deceased",
     "alias": "t_hosp_sev_dec",
-    "min" : 0,
+    "min" : 0.01,
     "max" : 30,
     "unit": "days in hospital if deceased"
     }
