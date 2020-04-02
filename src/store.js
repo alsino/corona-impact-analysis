@@ -1,8 +1,8 @@
 import { writable, readable, derived } from 'svelte/store';
 import * as d3 from "d3";
 
-export const dataLoaded = writable(false);
 export const dataset = writable(undefined);
+export const dataLoaded = writable(false);
 export const params = writable(undefined);
 
 export let WWIDTH = window.innerWidth;
@@ -195,7 +195,6 @@ export async function requestAPI(endpoint){
   const res = await fetch(endpoint, requestOptions)
     .then(response => response.json())
     .then(function(data) {
-      // console.log(data);
       dataset.set(data);
       dataLoaded.set(true);
     })

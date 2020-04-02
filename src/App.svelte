@@ -73,9 +73,15 @@
 		Hypothetical%20R0=${settings["Hypothetical%20R0"]}`
 
 	
-	onMount(async () => {
+	// onMount(async () => {
+	// 	requestAPI(API);
+	// });
+
+	beforeUpdate(() => {
 		requestAPI(API);
+		// console.log($dataLoaded);
 	});
+
 
 
 </script>
@@ -83,6 +89,10 @@
 <div id="app">
 
 	<Header/>
+
+	{#if !$dataLoaded}
+		<div class="loader"></div>
+	{/if}
 
 	<section id="charts">
 		<div id="highlight">
