@@ -150,7 +150,7 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Parameter id={1} label={"Beginning"}/>
+				<Parameter/>
 			</div>
 		</TabPanel>		
 	</Tabs>

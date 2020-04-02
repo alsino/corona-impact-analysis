@@ -120,7 +120,7 @@
 				bind:value={settings[item.name]} 
 				min={item.min} 
 				max={item.max} 
-				step=0.01 
+				step=1 
 				on:change={update}
 			>
 			<SvelteTooltip tip={item.unit} top >

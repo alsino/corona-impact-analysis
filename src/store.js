@@ -18,11 +18,7 @@ export const formatStepchart = d3.format(".1f");
 export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
-export const API_ENDPOINT = "https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/simulate?";
-// New: https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?
-// Alt: https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/simulate?
-
-
+export const API_ENDPOINT = "https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?";
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
@@ -190,14 +186,13 @@ export async function requestAPI(endpoint){
 
   const requestOptions = {
     method: 'GET',
-    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
       "X-API-KEY": "klNdVBwgIAKqwwofBPiF0Q",
     }
   };
   
-  const res = await fetch(endpoint)
+  const res = await fetch(endpoint, requestOptions)
     .then(response => response.json())
     .then(function(data) {
       console.log(data);
@@ -206,11 +201,4 @@ export async function requestAPI(endpoint){
     })
     .catch(error => console.log('error', error));
 
-  // const res = await fetch(endpoint);
-  // let data = await res.json();
-  // dataset.set(data)
-  // dataLoaded.set(true);
-  // console.log(dataLoaded);
-  // console.log(res);
-  // console.log(data);
 }
