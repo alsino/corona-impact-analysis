@@ -6,6 +6,7 @@
 	import SvelteTooltip from 'svelte-tooltip';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
+	import { API_ENDPOINT } from './store.js';
 
 	let settings = $params;
 	let API;
@@ -13,7 +14,7 @@
 
 	function update(){
 
-		API= `https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/simulate?
+		API= `${API_ENDPOINT}
 		policy_period0=${settings.policy_period0}&
 		policy_period1=${settings.policy_period1}&
 		policy_period2=${settings.policy_period2}&

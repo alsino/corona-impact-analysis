@@ -24,11 +24,14 @@
 	import { dataset } from './store.js';
 	import { CWIDTHBIG } from './store.js';
 	import { CWIDTHSMALL } from './store.js';
+	import { API_ENDPOINT } from './store.js';
+	
 
 	let settings = $params;
 	let data;
 
-	let API= `https://f2kayjqpni.execute-api.eu-central-1.amazonaws.com/dev/simulate?
+
+	let API= `${API_ENDPOINT}
 		policy_period0=${settings.policy_period0}&
 		policy_period1=${settings.policy_period1}&
 		policy_period2=${settings.policy_period2}&
@@ -156,6 +159,7 @@
 
 	<section id="credits">
 		<div>Model & calculations: Maximilian Eber, Friedrich Geiecke, Wolfgang Ridinger</div>
+		<div>In collaboration with: Dominic Ponattu (BMF)</div>
 		<div>Design & development: <a target="_blank" href="https:alsino.io/">Alsino Skowronnek</a></div>
 	</section>
 </div>
