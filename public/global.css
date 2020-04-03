@@ -91,13 +91,12 @@ input {
 }
 
 .c3-ygrid-line line {
-	stroke: #e2e2e2;
-	/* stroke: #2c2c2c; */
-	stroke-dasharray: 3;
+  stroke-dasharray: 3;
+  fill: #242424;
 }
 
 .c3-ygrid-line text {
-	/* stroke: #2c2c2c; */
+	fill: #2c2c2c;
 }
 
 
