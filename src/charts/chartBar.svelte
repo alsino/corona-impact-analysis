@@ -103,15 +103,10 @@ function renderChart(timeOut){
 
 };
 
-onMount(() => {
-  renderChart(5000);
-}); // onMount end
-
-
 
 beforeUpdate(() => {
   renderChart(0);
-}); // beforeUpdate end
+});
 
 </script>
 
