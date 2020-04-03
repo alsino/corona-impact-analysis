@@ -25,6 +25,15 @@ Then install the necessary JavaScript dependencies with:
 npm install
 ```
 
+## Data access
+
+If you want to run the app locally, you will have to request access to the API_ENDPOINT and the API_KEY from us and add them to a .env file in the root directory, i.e. 
+```
+API_URL='API_URL'
+API_KEY='MY_API_KEY'
+```
+
+
 ## Development
 Open your terminal and navigate to the repository. Then run the following command in your terminal:
 ```bash
