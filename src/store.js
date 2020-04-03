@@ -87,7 +87,7 @@ export let params2 = [
     "min": 0,
     "max": 10,
     "unit": "individuals infected on average",
-    "apiRequest" : false
+    "apiRequest" : true
     },
     {
       "descr": "Number of Intensive Care Units",
@@ -229,7 +229,7 @@ export async function requestAPI(endpoint){
     .then(function(data) {
       dataset.set(data);
       dataLoaded.set(true);
-      console.log(data);
+      // console.log(data);
     })
     .catch(error => console.log('error', error));
 
