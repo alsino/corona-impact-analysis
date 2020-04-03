@@ -21,10 +21,6 @@ export const formatYAxis = d3.format(",.0f");
 const API_KEY = process.env.API_KEY;
 export const API_ENDPOINT = process.env.API_URL;
 
-// const API_KEY = "klNdVBwgIAKqwwofBPiF0Q";
-// export const API_ENDPOINT = "https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?"
-
-
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "HospitalizedExclICU": "#00CBDB",
