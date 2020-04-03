@@ -22,6 +22,9 @@ import { RPOINT } from '../store.js';
 import { formatBarchart } from '../store.js';
 import { formatTime } from '../store.js';
 import { formatYAxis } from '../store.js';
+import { params } from '../store.js';
+
+let settings = $params;
 let chart;
 
 
@@ -45,7 +48,7 @@ function renderChart(timeOut){
 
       if (capacity){
         lines = [
-            {value: line1[1], text: line1[0], position: 'start'},
+            {value: settings.icu_capacity, text: line1[0], position: 'start'},
             {value: line2[1], text: line2[0], position: 'start'},
           ]
       } else {lines = []}

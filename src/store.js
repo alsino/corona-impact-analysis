@@ -18,8 +18,11 @@ export const formatStepchart = d3.format(".1f");
 export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
-const API_KEY = process.env.API_KEY;
-export const API_ENDPOINT = process.env.API_URL;
+// const API_KEY = process.env.API_KEY;
+// export const API_ENDPOINT = process.env.API_URL;
+
+const API_KEY = "klNdVBwgIAKqwwofBPiF0Q";
+export const API_ENDPOINT = "https://5ljgfsjku8.execute-api.eu-central-1.amazonaws.com/prod/simulate?"
 
 
 export const COLORS = {
@@ -84,7 +87,34 @@ export let params2 = [
     "min": 0,
     "max": 10,
     "unit": "individuals infected on average",
-    "group": "General"
+    "apiRequest" : false
+    },
+    {
+      "descr": "Number of Intensive Care Units",
+      "name": "icu_capacity",
+      "alias": "icu_capacity",
+      "min" : 5000,
+      "max" : 60000,
+      "unit": "ICUs",
+      "apiRequest" : false
+    },
+    {
+      "descr": "Number of hospital beds",
+      "name": "hospital_capacity",
+      "alias": "hospital_capacity",
+      "min" : 50000,
+      "max" : 500000,
+      "unit": "beds",
+      "apiRequest" : false
+    },
+    {
+      "descr": "Hospitalized patients require intensive care",
+      "name": "p_icu_given_hospital",
+      "alias": "p_icu_given_hosp",
+      "min" : 0,
+      "max" : 1,
+      "unit": "share",
+      "apiRequest" : true
     }
   ]
 },
@@ -199,6 +229,7 @@ export async function requestAPI(endpoint){
     .then(function(data) {
       dataset.set(data);
       dataLoaded.set(true);
+      console.log(data);
     })
     .catch(error => console.log('error', error));
 

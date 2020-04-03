@@ -60,7 +60,6 @@
 		requestAPI(API);
 	}
 
-
 </script>
 
 <div class="ctrl">
@@ -69,8 +68,23 @@
 		{#each general as item, i}
 			<div class="date">
 			<SvelteTooltip tip={item.descr} top >
-				<span class="var-name">{item.name}</span>
+				<span class="var-name">{item.alias}</span>
 			</SvelteTooltip>
+
+			{#if !item.apiRequest}
+
+			<input 
+				type=range 
+				bind:value={settings[item.name]} 
+				min={item.min} 
+				max={item.max} 
+				step=100 
+				on:change={update}
+			>
+
+
+			{:else}
+
 			<input 
 				type=range 
 				bind:value={settings[item.name]} 
@@ -79,6 +93,10 @@
 				step=0.01 
 				on:change={update}
 			>
+
+			{/if}
+
+
 			<SvelteTooltip tip={item.unit} top >
 				<span class="var-value">{settings[item.name]}</span>
 			</SvelteTooltip>
