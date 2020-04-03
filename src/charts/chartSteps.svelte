@@ -5,6 +5,7 @@ export let height;
 export let width;
 export let data;
 
+
 import * as d3 from "d3";
 import c3 from "c3";
 import '../../node_modules/c3/c3.min.css';

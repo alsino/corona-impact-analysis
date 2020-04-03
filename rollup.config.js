@@ -9,6 +9,7 @@ import json from 'rollup-plugin-json';
 import rollup_start_dev from './rollup_start_dev';
 import {config} from 'dotenv';
 import replace from '@rollup/plugin-replace';
+import babel from 'rollup-plugin-babel';
 
 
 const production = !process.env.ROLLUP_WATCH;
