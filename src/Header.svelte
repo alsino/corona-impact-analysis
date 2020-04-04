@@ -1,5 +1,5 @@
 <section id="intro">
-      <h2 id="intro-heading">Corona Impact Analysis - Dashboard</h2>
+      <h2 id="intro-heading">Covid-19 Policy Simulations</h2>
       <div id="intro-text">
         <p>
         This tool visualizes the impact of varying policy paths on the dynamics of an epidemic. 
