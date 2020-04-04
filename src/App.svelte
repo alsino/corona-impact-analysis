@@ -137,13 +137,13 @@
 
 		<TabPanel>
 			<div class="tab-wrapper">
-				<Control id={1} label={"Beginning"}/>
-				<Control id={2} label={"Policy intervention 1"}/>
-				<Control id={3} label={"Policy intervention 2"}/>
-				<Control id={4} label={"Policy intervention 3"}/>
+				<Control id={1} label={"Beginning of simulation"}/>
+				<Control id={2} label={"First intervention"}/>
+				<Control id={3} label={"Lockdown"}/>
+				<Control id={4} label={"Post-lockdown"}/>
 				<Control id={5} label={"P_self_quarantine"}/>
 				<Control id={6} label={"End of simulation"}/>
-				<div class ="footnote">* Policy intervention 1-3: Percentage decrease in new infections per period, eg. through social distancing or fast testing and isolation</div>
+				<div class ="footnote">* Policy strength: Percentage decrease in new infections per period, eg. through social distancing or fast testing and isolation</div>
 
 			</div>
 		</TabPanel>
