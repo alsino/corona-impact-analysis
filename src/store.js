@@ -37,7 +37,7 @@ params.set({
   "policy_period4": "2020-12-31",
   "policy_strength1": 0.2,
   "policy_strength2": 0.8,
-  "policy_strength3": 0.3,
+  "policy_strength3": 0.6,
   "r0": 2.4,
   "t_incubation": 4.6,
   "t_presymptomatic": 0.5,
