@@ -10,7 +10,12 @@
         </p>
         
         <p>
-        Don't take the model too seriously - it is not a forecasting tool. We built it to illustrate why keeping the number of infections low is crucial even in the medium-term. 
+        Don't take the model too seriously - it is not a forecasting tool. 
+        We built it to illustrate why keeping the number of new infections low throughout the epidemic is crucial. 
+        For example, you can turn down policy strength in the post-lockdown period to 0.5 using the third slider below. 
+        This is weak enough to trigger exponential growth, eventually overwhelming the capacity of the healthcare system. 
+        Therefore, we should not ask "How long should we be in lockdown?". Instead, the key question is "How can we implement strong policy at minimal cost?".
         </p>
+
       </div>
 </section>
