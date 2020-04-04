@@ -14,7 +14,7 @@
         We built it to illustrate why keeping the number of new infections low throughout the epidemic is crucial. 
         For example, you can turn down policy strength in the post-lockdown period to 0.5 using the third slider below. 
         This is weak enough to exhaust the capacity of the healthcare system. 
-        Therefore, we should not ask "How long should we be in lockdown?". Instead, the key question is "How can we implement strong policy at minimal cost?".
+        Therefore, we should not ask "How long will we be in lockdown?". Instead, the key question is "How can we implement strong policy at minimal cost?".
         </p>
 
       </div>
