@@ -1,5 +1,5 @@
 <section id="intro">
-      <h2 id="intro-heading">Corona Impact Analysis - Dashboard</h2>
+      <h2 id="intro-heading">Covid-19 Policy Simulations</h2>
       <div id="intro-text">
         <p>
         This tool visualizes the impact of varying policy paths on the dynamics of an epidemic. 
@@ -10,7 +10,12 @@
         </p>
         
         <p>
-        Don't take the model too seriously - it is not a forecasting tool. We built it to illustrate why keeping the number of infections low is crucial even in the medium-term. 
+        Don't take the model too seriously - it is not a forecasting tool. 
+        We built it to illustrate why keeping the number of new infections low throughout the epidemic is crucial. 
+        For example, you can turn down policy strength in the post-lockdown period to 0.5 using the third slider below. 
+        This is weak enough to exhaust the capacity of the healthcare system. 
+        Therefore, we should not ask "How long will we be in lockdown?". Instead, the key question is "How can we implement strong policy at minimal cost?".
         </p>
+
       </div>
 </section>
