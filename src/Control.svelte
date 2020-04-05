@@ -24,17 +24,17 @@
 		policy_strength2=${settings.policy_strength2}&
 		policy_strength3=${settings.policy_strength3}&
 		r0=${settings.r0}&
-		t_incubation=${settings.t_incubation}&
-		t_presymptomatic=${settings.t_presymptomatic}&
-		t_recovery_asymptomatic=${settings.t_recovery_asymptomatic}&
-		t_recovery_mild=${settings.t_recovery_mild}&
-		t_home_severe=${settings.t_home_severe}&
-		t_hospital_severe_recovered=${settings.t_hospital_severe_recovered}&
-		t_hospital_severe_deceased=${settings.t_hospital_severe_deceased}&
-		p_asymptomatic=${settings.p_asymptomatic}&
-		p_severe=${settings.p_severe}&
-		p_fatal=${settings.p_fatal}&
-		p_self_quarantine=${settings.p_self_quarantine}&
+		t_e_inc=${settings.t_e_inc}&
+		t_i_inc=${settings.t_i_inc}&
+		t_asy=${settings.t_asy}&
+		t_mild=${settings.t_mild}&
+		t_sev_pre_hos=${settings.t_sev_pre_hos}&
+		t_sev_hos_rec=${settings.t_sev_hos_rec}&
+		t_sev_hos_dec=${settings.t_sev_hos_dec}&
+		p_asy=${settings.p_asy}&
+		p_sev_rec=${settings.p_sev_rec}&
+		p_sev_dec=${settings.p_sev_dec}&
+		self_quar_strength=${settings.self_quar_strength}&
 		p_icu_given_hospital=${settings.p_icu_given_hospital}&
 		population_size=${settings.population_size}&
 		hospital_capacity=${settings.hospital_capacity}&
@@ -125,8 +125,8 @@
 	<div class="ctrl">
 		<div class="date date-small">
 			<span>{label}</span>
-			<input type=range bind:value={settings.p_self_quarantine} min=0 max=1 step=0.01 on:change={update}>
-			<span style="width: 21px;">{settings.p_self_quarantine}</span>
+			<input type=range bind:value={settings.self_quar_strength} min=0 max=1 step=0.01 on:change={update}>
+			<span style="width: 21px;">{settings.self_quar_strength}</span>
 		</div>
 	<div class="spacer"></div>
 	<div class="strength"></div>
@@ -207,7 +207,3 @@
 }
 
 </style>
-
-
-
-

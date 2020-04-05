@@ -40,17 +40,17 @@ params.set({
   "policy_strength2": 0.7,
   "policy_strength3": 0.63,
   "r0": 2.6,
-  "t_incubation": 4.6,
-  "t_presymptomatic": 0.5,
-  "t_recovery_asymptomatic": 6,
-  "t_recovery_mild": 6,
-  "t_home_severe": 5,
-  "t_hospital_severe_recovered": 10.4,
-  "t_hospital_severe_deceased": 10.4,
-  "p_asymptomatic": 0.3,
-  "p_severe": 0.044,
-  "p_fatal": 0.009,
-  "p_self_quarantine": 0.66,
+  "t_e_inc": 4.6,
+  "t_i_inc": 0.5,
+  "t_asy": 6,
+  "t_mild": 6,
+  "t_sev_pre_hos": 5,
+  "t_sev_hos_rec": 10.4,
+  "t_sev_hos_dec": 10.4,
+  "p_asy": 0.3,
+  "p_sev_rec": 0.044,
+  "p_sev_dec": 0.009,
+  "self_quar_strength": 0.66,
   "p_icu_given_hospital": 0.4,
   "population_size": 82790000,
   "hospital_capacity": 200000,
@@ -118,16 +118,16 @@ export let params2 = [
   "Incubation": [
     {
       "descr": "Non-infectious incubation period",
-      "name": "t_incubation",
-      "alias": "t_incubation",
+      "name": "t_e_inc",
+      "alias": "t_e_inc",
       "min" : 0.01,
       "max" : 10,
       "unit": "days"
     },
     {
       "descr": "Infectious incubation period",
-      "name": "t_presymptomatic",
-      "alias": "t_presymptomatic",
+      "name": "t_i_inc",
+      "alias": "t_i_inc",
       "min" : 0.01,
       "max" : 10,
       "unit": "days"
@@ -138,7 +138,7 @@ export let params2 = [
   "Illness duration": [
     {
       "descr": "Illness duration asymptomatic course",
-      "name": "t_recovery_asymptomatic",
+      "name": "t_asy",
       "alias": "t_recov_asymp",
       "min" : 1,
       "max" : 30,
@@ -146,23 +146,23 @@ export let params2 = [
     },
     {
       "descr": "Illness duration mild course",
-      "name": "t_recovery_mild",
-      "alias": "t_recovery_mild",
+      "name": "t_mild",
+      "alias": "t_mild",
       "min" : 1,
       "max" : 30,
       "unit": "days"
     },
     {
       "descr": "Illness duration severe course",
-      "name": "t_home_severe",
-      "alias": "t_home_severe",
+      "name": "t_sev_pre_hos",
+      "alias": "t_sev_pre_hos",
       "min" : 1,
       "max" : 30,
       "unit": "initial days at home"
     },
     {
     "descr": "Illness duration severe course",
-    "name": "t_hospital_severe_recovered",
+    "name": "t_sev_hos_rec",
     "alias": "t_hosp_sev_rec",
     "min" : 0.01,
     "max" : 30,
@@ -170,7 +170,7 @@ export let params2 = [
     },
     {
     "descr": "Illness duration severe course",
-    "name": "t_hospital_severe_deceased",
+    "name": "t_sev_hos_dec",
     "alias": "t_hosp_sev_dec",
     "min" : 0.01,
     "max" : 30,
@@ -182,24 +182,24 @@ export let params2 = [
   "Group sizes" : [
     {
       "descr": "Fraction of individuals with asymptomatic course",
-      "name": "p_asymptomatic",
-      "alias": "p_asymptomatic",
+      "name": "p_asy",
+      "alias": "p_asy",
       "min" : 0,
       "max" : 1,
       "unit": "share"
     },
     {
       "descr": "Fraction of individuals hospitalized / severe course",
-      "name": "p_severe",
-      "alias": "p_severe",
+      "name": "p_sev_rec",
+      "alias": "p_sev_rec",
       "min" : 0,
       "max" : 1,
       "unit": "share"
     },
     {
       "descr": "Mortality rate",
-      "name": "p_fatal",
-      "alias": "p_fatal",
+      "name": "p_sev_dec",
+      "alias": "p_sev_dec",
       "min" : 0,
       "max" : 1,
       "unit": "share"
