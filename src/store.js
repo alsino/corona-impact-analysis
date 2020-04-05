@@ -26,8 +26,8 @@ export const COLORS = {
     "HospitalizedExclICU": "#00CBDB",
     "ICU": "#FFBB00",
     "Hypothetical R0": "#00CBDB",
-    "Currently_infected": "#00CBDB",
-    "R_combined": "#00CBDB"  
+    "Infectious": "#00CBDB",
+    "Recovered": "#00CBDB"  
 }
 
 params.set({

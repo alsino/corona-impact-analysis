@@ -113,7 +113,7 @@
 						width={CWIDTHSMALL} 
 						height={200} 
 						multiple={false} 
-						data1={"Currently_infected"}
+						data1={"Infectious"}
 						data2={""}  
 						capacity={false}
 						capacity1={""} 
@@ -123,7 +123,7 @@
 						width={CWIDTHSMALL} 
 						height={200} 
 						multiple={false} 
-						data1={"R_combined"} 
+						data1={"Recovered"} 
 						data2={""}  
 						capacity={false} 
 						capacity1={""} 
