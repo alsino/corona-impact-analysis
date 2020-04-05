@@ -2,6 +2,10 @@
       <h2 id="intro-heading">Covid-19 Policy Simulations</h2>
       <div id="intro-text">
         <p>
+        Warning: The tool is currently under revision.
+        </p>
+
+        <p>
         This tool visualizes the impact of varying policy paths on the dynamics of an epidemic. 
         You can adjust the duration and strength of policy interventions (social distancing, test-trace-quarantine, etc.) using the date fields and sliders below the graphs. 
         The underlying simulation is based on a modified <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model">SEIR model</a>. 
