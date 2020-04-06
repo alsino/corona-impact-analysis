@@ -4,11 +4,7 @@
 // Svelte tabs: https://svelte.dev/repl/8e68120858e5322272dc9136c4bb79cc?version=3.5.1
 
 // Issues
-// Data loading per promise not per timeout
 // Update charts not per re-render but just data update
-
-// ToDos
-// API key
 
 	import axios from 'axios';
 	import { onMount, beforeUpdate } from 'svelte';
