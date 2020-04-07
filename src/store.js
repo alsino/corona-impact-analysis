@@ -19,15 +19,15 @@ export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
 const API_KEY = process.env.API_KEY;
-export const API_ENDPOINT = process.env.API_URL;
+export const API_ENDPOINT = "https://803hbbjmcc.execute-api.eu-central-1.amazonaws.com/dev/simulate?";
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
-    "HospitalizedExclICU": "#00CBDB",
+    "Hospitalized excl. ICU": "#00CBDB",
     "ICU": "#FFBB00",
     "Hypothetical R0": "#00CBDB",
-    "Currently_infected": "#00CBDB",
-    "R_combined": "#00CBDB"  
+    "Infectious": "#00CBDB",
+    "Recovered": "#00CBDB"  
 }
 
 params.set({
@@ -37,20 +37,20 @@ params.set({
   "policy_period3": "2020-04-14",
   "policy_period4": "2020-12-31",
   "policy_strength1": 0.2,
-  "policy_strength2": 0.75,
-  "policy_strength3": 0.70,
-  "r0": 2.7,
-  "t_incubation": 4.6,
-  "t_presymptomatic": 0.5,
-  "t_recovery_asymptomatic": 6,
-  "t_recovery_mild": 7,
-  "t_home_severe": 5,
-  "t_hospital_severe_recovered": 25.5,
-  "t_hospital_severe_deceased": 9,
-  "p_asymptomatic": 0.3,
-  "p_severe": 0.044,
-  "p_fatal": 0.009,
-  "p_self_quarantine": 0.0,
+  "policy_strength2": 0.7,
+  "policy_strength3": 0.63,
+  "r0": 2.6,
+  "t_e_inc": 4.6,
+  "t_i_inc": 0.5,
+  "t_asy": 6,
+  "t_mild": 7,
+  "t_sev_pre_hos": 5,
+  "t_sev_hos_rec": 25.5,
+  "t_sev_hos_dec": 9,
+  "p_asy": 0.3,
+  "p_sev_rec": 0.044,
+  "p_sev_dec": 0.009,
+  "self_quar_strength": 0.0,
   "p_icu_given_hospital": 0.4,
   "population_size": 82790000,
   "hospital_capacity": 200000,
@@ -58,17 +58,16 @@ params.set({
   "T": 0,
   "S": 0.9999994,
   "E": 0.0000006,
-  "I": 0,
-  "I_asymptomatic": 0,
+  "I_inc": 0,
+  "I_asy": 0,
   "I_mild": 0,
-  "I_severe_home": 0,
-  "I_severe_hospital": 0,
-  "I_fatal_home": 0,
-  "I_fatal_hospital": 0,
-  "R_from_asymptomatic": 0,
-  "R_from_mild": 0,
-  "R_from_severe": 0,
-  "Dead": 0,
+  "I_sev_pre_hos": 0,
+  "I_sev_hos_rec": 0,
+  "I_sev_hos_dec": 0,
+  "R_asy": 0,
+  "R_mild": 0,
+  "R_sev": 0,
+  "D_sev": 0,
   "Hypothetical%20R0": 2.4
 });
 
@@ -118,16 +117,16 @@ export let params2 = [
   "Incubation": [
     {
       "descr": "Non-infectious incubation period",
-      "name": "t_incubation",
-      "alias": "t_incubation",
+      "name": "t_e_inc",
+      "alias": "t_e_inc",
       "min" : 0.01,
       "max" : 10,
       "unit": "days"
     },
     {
       "descr": "Infectious incubation period",
-      "name": "t_presymptomatic",
-      "alias": "t_presymptomatic",
+      "name": "t_i_inc",
+      "alias": "t_i_inc",
       "min" : 0.01,
       "max" : 10,
       "unit": "days"
@@ -138,7 +137,7 @@ export let params2 = [
   "Illness duration": [
     {
       "descr": "Illness duration asymptomatic course",
-      "name": "t_recovery_asymptomatic",
+      "name": "t_asy",
       "alias": "t_recov_asymp",
       "min" : 1,
       "max" : 30,
@@ -146,23 +145,23 @@ export let params2 = [
     },
     {
       "descr": "Illness duration mild course",
-      "name": "t_recovery_mild",
-      "alias": "t_recovery_mild",
+      "name": "t_mild",
+      "alias": "t_mild",
       "min" : 1,
       "max" : 30,
       "unit": "days"
     },
     {
       "descr": "Illness duration severe course",
-      "name": "t_home_severe",
-      "alias": "t_home_severe",
+      "name": "t_sev_pre_hos",
+      "alias": "t_sev_pre_hos",
       "min" : 1,
       "max" : 30,
       "unit": "initial days at home"
     },
     {
     "descr": "Illness duration severe course",
-    "name": "t_hospital_severe_recovered",
+    "name": "t_sev_hos_rec",
     "alias": "t_hosp_sev_rec",
     "min" : 0.01,
     "max" : 30,
@@ -170,7 +169,7 @@ export let params2 = [
     },
     {
     "descr": "Illness duration severe course",
-    "name": "t_hospital_severe_deceased",
+    "name": "t_sev_hos_dec",
     "alias": "t_hosp_sev_dec",
     "min" : 0.01,
     "max" : 30,
@@ -182,24 +181,24 @@ export let params2 = [
   "Group sizes" : [
     {
       "descr": "Fraction of individuals with asymptomatic course",
-      "name": "p_asymptomatic",
-      "alias": "p_asymptomatic",
+      "name": "p_asy",
+      "alias": "p_asy",
       "min" : 0,
       "max" : 1,
       "unit": "share"
     },
     {
       "descr": "Fraction of individuals hospitalized / severe course",
-      "name": "p_severe",
-      "alias": "p_severe",
+      "name": "p_sev_rec",
+      "alias": "p_sev_rec",
       "min" : 0,
       "max" : 1,
       "unit": "share"
     },
     {
       "descr": "Mortality rate",
-      "name": "p_fatal",
-      "alias": "p_fatal",
+      "name": "p_sev_dec",
+      "alias": "p_sev_dec",
       "min" : 0,
       "max" : 1,
       "unit": "share"

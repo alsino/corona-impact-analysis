@@ -26,17 +26,17 @@
 		policy_strength2=${settings.policy_strength2}&
 		policy_strength3=${settings.policy_strength3}&
 		r0=${settings.r0}&
-		t_incubation=${settings.t_incubation}&
-		t_presymptomatic=${settings.t_presymptomatic}&
-		t_recovery_asymptomatic=${settings.t_recovery_asymptomatic}&
-		t_recovery_mild=${settings.t_recovery_mild}&
-		t_home_severe=${settings.t_home_severe}&
-		t_hospital_severe_recovered=${settings.t_hospital_severe_recovered}&
-		t_hospital_severe_deceased=${settings.t_hospital_severe_deceased}&
-		p_asymptomatic=${settings.p_asymptomatic}&
-		p_severe=${settings.p_severe}&
-		p_fatal=${settings.p_fatal}&
-		p_self_quarantine=${settings.p_self_quarantine}&
+		t_e_inc=${settings.t_e_inc}&
+		t_i_inc=${settings.t_i_inc}&
+		t_asy=${settings.t_asy}&
+		t_mild=${settings.t_mild}&
+		t_sev_pre_hos=${settings.t_sev_pre_hos}&
+		t_sev_hos_rec=${settings.t_sev_hos_rec}&
+		t_sev_hos_dec=${settings.t_sev_hos_dec}&
+		p_asy=${settings.p_asy}&
+		p_sev_rec=${settings.p_sev_rec}&
+		p_sev_dec=${settings.p_sev_dec}&
+		self_quar_strength=${settings.self_quar_strength}&
 		p_icu_given_hospital=${settings.p_icu_given_hospital}&
 		population_size=${settings.population_size}&
 		hospital_capacity=${settings.hospital_capacity}&
@@ -44,17 +44,16 @@
 		T=${settings["T"]}&
 		S=${settings["S"]}&
 		E=${settings["E"]}&
-		I=${settings["I"]}&
-		I_asymptomatic=${settings.I_asymptomatic}&
+		I_inc=${settings["I_inc"]}&
+		I_asy=${settings.I_asy}&
 		I_mild=${settings.I_mild}&
-		I_severe_home=${settings.I_severe_home}&
-		I_severe_hospital=${settings.I_severe_hospital}&
-		I_fatal_home=${settings.I_fatal_home}&
-		I_fatal_hospital=${settings.I_fatal_hospital}&
-		R_from_asymptomatic=${settings.R_from_asymptomatic}&
-		R_from_mild=${settings.R_from_mild}&
-		R_from_severe=${settings.R_from_severe}&
-		Dead=${settings.Dead}&
+		I_sev_pre_hos=${settings.I_sev_pre_hos}&
+		I_sev_hos_rec=${settings.I_sev_hos_rec}&
+		I_sev_hos_dec=${settings.I_sev_hos_dec}&
+		R_asy=${settings.R_asy}&
+		R_mild=${settings.R_mild}&
+		R_sev=${settings.R_sev}&
+		D_sev=${settings.D_sev}&
 		Hypothetical%20R0=${settings["Hypothetical%20R0"]}`
 
 		requestAPI(API);
@@ -274,7 +273,3 @@
 }	
 
 </style>
-
-
-
-
