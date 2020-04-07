@@ -18,7 +18,7 @@ export const formatStepchart = d3.format(".1f");
 export const formatTime = d3.timeFormat("%d %B %Y");
 export const formatYAxis = d3.format(",.0f");
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = "klNdVBwgIAKqwwofBPiF0Q";
 export const API_ENDPOINT = "https://35xui5app1.execute-api.eu-central-1.amazonaws.com/dev/simulate";
 
 export const COLORS = {
