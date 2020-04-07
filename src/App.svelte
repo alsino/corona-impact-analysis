@@ -54,17 +54,17 @@
 		T=${settings["T"]}&
 		S=${settings["S"]}&
 		E=${settings["E"]}&
-		I=${settings["I"]}&
-		I_asymptomatic=${settings.I_asymptomatic}&
+		I_inc=${settings["I_inc"]}&
+		I_asy=${settings.I_asy}&
 		I_mild=${settings.I_mild}&
-		I_severe_home=${settings.I_severe_home}&
-		I_severe_hospital=${settings.I_severe_hospital}&
-		I_fatal_home=${settings.I_fatal_home}&
+		I_sev_pre_hos=${settings.I_sev_pre_hos}&
+		I_sev_hos_rec=${settings.I_sev_hos_rec}&
+		I_sev_hos_dec=${settings.I_sev_hos_dec}&
 		I_fatal_hospital=${settings.I_fatal_hospital}&
-		R_from_asymptomatic=${settings.R_from_asymptomatic}&
-		R_from_mild=${settings.R_from_mild}&
-		R_from_severe=${settings.R_from_severe}&
-		Dead=${settings.Dead}&
+		R_asy=${settings.R_asy}&
+		R_mild=${settings.R_mild}&
+		R_sev=${settings.R_sev}&
+		D_sev=${settings.D_sev}&
 		Hypothetical%20R0=${settings["Hypothetical%20R0"]}`
 
 
