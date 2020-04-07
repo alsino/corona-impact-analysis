@@ -50,7 +50,6 @@
 		I_sev_pre_hos=${settings.I_sev_pre_hos}&
 		I_sev_hos_rec=${settings.I_sev_hos_rec}&
 		I_sev_hos_dec=${settings.I_sev_hos_dec}&
-		I_fatal_hospital=${settings.I_fatal_hospital}&
 		R_asy=${settings.R_asy}&
 		R_mild=${settings.R_mild}&
 		R_sev=${settings.R_sev}&
