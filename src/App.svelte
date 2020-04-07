@@ -91,7 +91,7 @@
 					width={CWIDTHBIG} 
 					height={400} 
 					multiple={true} 
-					data1={"HospitalizedExclICU"} 
+					data1={"Hospitalized excl. ICU"} 
 					data2={"ICU"} 
 					capacity={true} 
 					capacity1={"IcuCapacity"} 

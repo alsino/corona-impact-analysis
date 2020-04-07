@@ -23,7 +23,7 @@ export const API_ENDPOINT = "https://803hbbjmcc.execute-api.eu-central-1.amazona
 
 export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
-    "HospitalizedExclICU": "#00CBDB",
+    "Hospitalized excl. ICU": "#00CBDB",
     "ICU": "#FFBB00",
     "Hypothetical R0": "#00CBDB",
     "Infectious": "#00CBDB",
