@@ -39,7 +39,7 @@ params.set({
   "policy_strength1": 0.2,
   "policy_strength2": 0.7,
   "policy_strength3": 0.63,
-  "r0": 2.6,
+  "r0": 2.8,
   "t_e_inc": 4.6,
   "t_i_inc": 0.5,
   "t_asy": 6,
