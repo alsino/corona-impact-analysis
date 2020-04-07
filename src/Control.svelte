@@ -122,7 +122,7 @@
 
 {:else if id == 5}
 
-	<div class="ctrl">
+	<!-- <div class="ctrl">
 		<div class="date date-small">
 			<span>{label}</span>
 			<input type=range bind:value={settings.self_quar_strength} min=0 max=1 step=0.01 on:change={update}>
@@ -130,7 +130,7 @@
 		</div>
 	<div class="spacer"></div>
 	<div class="strength"></div>
-	</div>
+	</div> -->
 
 {:else if id == 6}
 
