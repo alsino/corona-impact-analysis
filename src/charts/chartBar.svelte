@@ -28,6 +28,8 @@ import { params } from '../store.js';
 let settings = $params;
 let chart;
 
+let name = "";
+
 
 function renderChart(timeOut){
 
@@ -49,12 +51,12 @@ function renderChart(timeOut){
       let line1 = $dataset[capacity1];
       let line2 = $dataset[capacity2];
 
-      // if (capacity){
-      //   lines = [
-      //       {value: settings.icu_capacity, text: line1[0], position: 'start'},
-      //       {value: line2[1], text: line2[0], position: 'start'},
-      //     ]
-      // } else {lines = []}
+      if (capacity){
+        lines = [
+            {value: settings.icu_capacity, text: line1[0], position: 'start'},
+            {value: line2[1], text: line2[0], position: 'start'},
+          ]
+      } else {lines = []}
 
 
       let hideSeries; 
@@ -63,7 +65,7 @@ function renderChart(timeOut){
         hideSeries = hide;
       } else { hideSeries = [];}
 
-      let name = "";
+      
      
 
       chart = c3.generate({
@@ -101,32 +103,17 @@ function renderChart(timeOut){
             onclick: function (id) { 
              chart.toggle(id);
 
-             
-              if (chart.data.shown("Hospitalized excl. ICU")) {
-                name = "Alsino";
-                console.log(name);
-                console.log(chart.data.shown())
-              } else {
-                name = "Robert";
-                console.log(name);
-                console.log(chart.data.shown())
-              };
-
-
-
-                  // lines = [
-                  //   {value: settings.icu_capacity, text: line1[0], position: 'start'},
-                  //   {value: line2[1], text: line2[0], position: 'start'},
-                  // ]
-                 
-
-                  // lines = [
-                  //   // {value: settings.icu_capacity, text: line1[0], position: 'start'},
-                  //   {value: line2[1], text: line2[0], position: 'start'},
-                  // ]
-
-                
-
+              // if (chart.data.shown("Hospitalized excl. ICU")) {
+              //   name = "Alsino";
+              //   console.log(name);
+              //   // console.log(chart.data.shown())
+              // } else {
+              //   name = "Robert";
+              //   console.log(name);
+              //   // console.log(chart.data.shown())
+              // };   
+              
+              
             }
               
           }
