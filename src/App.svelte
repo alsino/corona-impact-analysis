@@ -90,7 +90,7 @@
 				<ChartBar id={"chart-0"} 
 					width={CWIDTHBIG} 
 					height={400} 
-					multiple={true} 
+					multiple={false} 
 					data1={"ICU"} 
 					data2={"Hospitalized excl. ICU"}
 					hide={"Hospitalized excl. ICU"}  
