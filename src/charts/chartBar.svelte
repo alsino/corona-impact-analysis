@@ -113,9 +113,8 @@ function renderChart(timeOut){
               //   // console.log(chart.data.shown())
               // };   
               
-              
+
             }
-              
           }
         },
         grid: {
@@ -132,28 +131,15 @@ function renderChart(timeOut){
         }
       }
     });
-
-    // if (chart.data.shown()){
-    //   console.log(chart.data.shown()[1]);
-    // }
-      
-
     }, timeOut);
-
-    
-    
 
 };
 
 
 beforeUpdate(() => {
   renderChart(0);
-
-  //  if (chart){
-  //     console.log(chart.data.shown());
-  //   }
-
 });
+
 
 </script>
 
