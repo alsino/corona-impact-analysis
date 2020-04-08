@@ -9,6 +9,7 @@ export let data2;
 export let capacity;
 export let capacity1;
 export let capacity2;
+export let hide;
 
 import * as d3 from "d3";
 import c3 from "c3";
@@ -27,8 +28,12 @@ import { params } from '../store.js';
 let settings = $params;
 let chart;
 
+let name = "";
+
 
 function renderChart(timeOut){
+
+    chart = chart;
 
     setTimeout(() => {
       let timeLine =  $dataset["time"];
@@ -53,6 +58,13 @@ function renderChart(timeOut){
           ]
       } else {lines = []}
 
+
+      let hideSeries; 
+
+      if (hide) {
+        hideSeries = hide;
+      } else { hideSeries = [];}
+
       
      
 
@@ -67,7 +79,8 @@ function renderChart(timeOut){
             columns: columns,
             type: 'bar',
             groups: [[data1, data2]],
-            colors: COLORS
+            colors: COLORS,
+            hide: hideSeries
           },
           axis: {
             x: {
@@ -84,6 +97,25 @@ function renderChart(timeOut){
         },
         point: {
             r: RPOINT
+        },
+        legend: {
+          item: {
+            onclick: function (id) { 
+             chart.toggle(id);
+
+              // if (chart.data.shown("Hospitalized excl. ICU")) {
+              //   name = "Alsino";
+              //   console.log(name);
+              //   // console.log(chart.data.shown())
+              // } else {
+              //   name = "Robert";
+              //   console.log(name);
+              //   // console.log(chart.data.shown())
+              // };   
+              
+
+            }
+          }
         },
         grid: {
         y: {
@@ -107,6 +139,7 @@ function renderChart(timeOut){
 beforeUpdate(() => {
   renderChart(0);
 });
+
 
 </script>
 

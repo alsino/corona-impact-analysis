@@ -25,6 +25,7 @@ export const COLORS = {
     "Reduction in new infections through policy": '#00CBDB',
     "Hospitalized excl. ICU": "#00CBDB",
     "ICU": "#FFBB00",
+    "Deceased" : "#FFBB00",
     "Hypothetical R0": "#00CBDB",
     "Infectious": "#00CBDB",
     "Recovered": "#00CBDB"  
