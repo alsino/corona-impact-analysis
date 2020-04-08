@@ -91,8 +91,9 @@
 					width={CWIDTHBIG} 
 					height={400} 
 					multiple={true} 
-					data1={"Hospitalized excl. ICU"} 
-					data2={"ICU"} 
+					data1={"ICU"} 
+					data2={"Hospitalized excl. ICU"}
+					hide={"Hospitalized excl. ICU"}  
 					capacity={true} 
 					capacity1={"IcuCapacity"} 
 					capacity2={"HospitalCapacity"}
@@ -110,6 +111,7 @@
 						multiple={false} 
 						data1={"Infectious"}
 						data2={""}  
+						hide={""}
 						capacity={false}
 						capacity1={""} 
 						capacity2={""} 
@@ -117,9 +119,10 @@
 					<ChartBar id={"chart-4"} 
 						width={CWIDTHSMALL} 
 						height={200} 
-						multiple={false} 
+						multiple={true} 
 						data1={"Recovered"} 
-						data2={""}  
+						data2={"Deceased"}
+						hide={""}    
 						capacity={false} 
 						capacity1={""} 
 						capacity2={""}

@@ -9,6 +9,7 @@ export let data2;
 export let capacity;
 export let capacity1;
 export let capacity2;
+export let hide;
 
 import * as d3 from "d3";
 import c3 from "c3";
@@ -30,6 +31,8 @@ let chart;
 
 function renderChart(timeOut){
 
+    chart = chart;
+
     setTimeout(() => {
       let timeLine =  $dataset["time"];
       let dataSet1 = $dataset[data1];
@@ -46,14 +49,21 @@ function renderChart(timeOut){
       let line1 = $dataset[capacity1];
       let line2 = $dataset[capacity2];
 
-      if (capacity){
-        lines = [
-            {value: settings.icu_capacity, text: line1[0], position: 'start'},
-            {value: line2[1], text: line2[0], position: 'start'},
-          ]
-      } else {lines = []}
+      // if (capacity){
+      //   lines = [
+      //       {value: settings.icu_capacity, text: line1[0], position: 'start'},
+      //       {value: line2[1], text: line2[0], position: 'start'},
+      //     ]
+      // } else {lines = []}
 
-      
+
+      let hideSeries; 
+
+      if (hide) {
+        hideSeries = hide;
+      } else { hideSeries = [];}
+
+      let name = "";
      
 
       chart = c3.generate({
@@ -67,7 +77,8 @@ function renderChart(timeOut){
             columns: columns,
             type: 'bar',
             groups: [[data1, data2]],
-            colors: COLORS
+            colors: COLORS,
+            hide: hideSeries
           },
           axis: {
             x: {
@@ -85,6 +96,41 @@ function renderChart(timeOut){
         point: {
             r: RPOINT
         },
+        legend: {
+          item: {
+            onclick: function (id) { 
+             chart.toggle(id);
+
+             
+              if (chart.data.shown("Hospitalized excl. ICU")) {
+                name = "Alsino";
+                console.log(name);
+                console.log(chart.data.shown())
+              } else {
+                name = "Robert";
+                console.log(name);
+                console.log(chart.data.shown())
+              };
+
+
+
+                  // lines = [
+                  //   {value: settings.icu_capacity, text: line1[0], position: 'start'},
+                  //   {value: line2[1], text: line2[0], position: 'start'},
+                  // ]
+                 
+
+                  // lines = [
+                  //   // {value: settings.icu_capacity, text: line1[0], position: 'start'},
+                  //   {value: line2[1], text: line2[0], position: 'start'},
+                  // ]
+
+                
+
+            }
+              
+          }
+        },
         grid: {
         y: {
           lines: lines
@@ -99,13 +145,27 @@ function renderChart(timeOut){
         }
       }
     });
+
+    // if (chart.data.shown()){
+    //   console.log(chart.data.shown()[1]);
+    // }
+      
+
     }, timeOut);
+
+    
+    
 
 };
 
 
 beforeUpdate(() => {
   renderChart(0);
+
+  //  if (chart){
+  //     console.log(chart.data.shown());
+  //   }
+
 });
 
 </script>
