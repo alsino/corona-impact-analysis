@@ -266,15 +266,6 @@ export let explanations = [{
   "Link": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(20)30162-4/fulltext"
 },
 {
-  "Variable": "",
-  "Meaning (German)": "",
-  "Our value": "",
-  "Estimate in literature": "11 days (8-14)",
-  "Comments": "Based on hospitalised patients in China",
-  "Source": "Zhou et al, Lancet, 28 Mar 2020",
-  "Link": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext"
-},
-{
   "Variable": "Illness duration (severe cases) in hospital/ICU until recovery",
   "Meaning (German)": "Anzahl der Tage im Krankenhaus bis Genesung",
   "Our value": "25.5 days",
