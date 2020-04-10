@@ -16,6 +16,7 @@
 	import { Tabs, TabList, TabPanel, Tab } from './tabs.js';
 	import { requestAPI } from './store.js';
 	import { params } from './store.js';
+	import { explanations } from './store.js';
 	import { dataLoaded } from './store.js';
 	import { dataset } from './store.js';
 	import { CWIDTHBIG } from './store.js';
@@ -69,7 +70,7 @@
 
 	beforeUpdate(() => {
 		requestAPI(API);
-		// console.log($dataLoaded);
+		console.log(explanations);
 	});
 
 
@@ -90,7 +91,7 @@
 				<ChartBar id={"chart-0"} 
 					width={CWIDTHBIG} 
 					height={400} 
-					multiple={false} 
+					multiple={false}
 					data1={"ICU"} 
 					data2={"Hospitalized excl. ICU"}
 					hide={"Hospitalized excl. ICU"}  
@@ -161,6 +162,41 @@
 		
 	</section>
 
+	<section id="explanation">
+
+	<div style="overflow-x:auto;">
+
+		<table>
+				<tr>
+					<th>Variable</th>
+					<th>Meaning (German)</th>
+					<th>Our value</th>
+					<th>Estimate in literature</th>
+					<th>Comments</th>
+					<th>Source</th>
+					<th>Url</th>
+				</tr>
+
+				{#each explanations as item}
+					<tr>
+						<td>{item["Variable"]}</td>
+						<td>{item["Meaning (German)"]}</td>
+						<td>{item["Our value"]}</td>
+						<td>{item["Estimate in literature"]}</td>
+						<td>{item["Comments"]}</td>
+						<td>{item["Source"]}</td>
+						<td><a target="_blank" href="{item["Link"]}">Link</a></td>
+					</tr>
+				{/each}
+			</table>
+	
+	
+	</div>
+
+		
+
+	</section>
+
 	<section id="credits">
 		<div>
 			<a href="https://github.com/maximilianeber/covid">Model & calculations</a>: 
@@ -205,7 +241,22 @@
 			margin: 2em 0 3em 0;
 
 			.tab-wrapper {
-				margin-top: 2em;
+				margin: 2em 0;
+			}
+		}
+
+		#explanation {
+			padding-top: 2em;
+
+			table {
+				table-layout: fixed;
+				width: 100%;  
+
+				th, td {
+					text-align: left;
+					padding: 5px 10px;
+					border-bottom: 1px solid #f0f0f0;
+				}
 			}
 		}
 
