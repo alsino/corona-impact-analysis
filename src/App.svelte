@@ -249,7 +249,7 @@
 			padding-top: 2em;
 
 			table {
-				table-layout: fixed;
+				table-layout: auto;
 				width: 100%;  
 
 				th, td {
