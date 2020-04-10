@@ -94,15 +94,15 @@ export let params2 = [
       "unit": "ICUs",
       "apiRequest" : false
     },
-    {
-      "descr": "Number of hospital beds",
-      "name": "hospital_capacity",
-      "alias": "hospital_capacity",
-      "min" : 50000,
-      "max" : 500000,
-      "unit": "beds",
-      "apiRequest" : false
-    },
+    // {
+    //   "descr": "Number of hospital beds",
+    //   "name": "hospital_capacity",
+    //   "alias": "hospital_capacity",
+    //   "min" : 50000,
+    //   "max" : 500000,
+    //   "unit": "beds",
+    //   "apiRequest" : false
+    // },
     {
       "descr": "Share of hospitalized requiring intensive care",
       "name": "p_icu_given_hospital",

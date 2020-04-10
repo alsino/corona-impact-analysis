@@ -97,7 +97,7 @@
 					hide={"Hospitalized excl. ICU"}  
 					capacity={true} 
 					capacity1={"IcuCapacity"} 
-					capacity2={"HospitalCapacity"}
+					capacity2={"IcuCapacity"}
 				/>
 			</div>
 			<div id="multiple">
