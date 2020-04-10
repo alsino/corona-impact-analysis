@@ -66,8 +66,8 @@
 		<div class="ctrl-name">General</div>
 		{#each general as item, i}
 			<div class="date">
-			<SvelteTooltip tip={item.descr} top >
-				<span class="var-name">{item.alias}</span>
+			<SvelteTooltip tip={item.name} top >
+				<span class="var-name">{item.descr}</span>
 			</SvelteTooltip>
 
 			{#if !item.apiRequest}
@@ -107,8 +107,8 @@
 		<div class="ctrl-name">Incubation</div>
 		{#each incubation as item, i}
 			<div class="date">
-			<SvelteTooltip tip={item.descr} top >
-				<span class="var-name">{item.name}</span>
+			<SvelteTooltip tip={item.name} top >
+				<span class="var-name">{item.descr}</span>
 			</SvelteTooltip>
 			<input 
 				type=range 
@@ -129,8 +129,8 @@
 		<div class="ctrl-name">Illness duration</div>
 		{#each duration as item, i}
 		<div class="date">
-			<SvelteTooltip tip={item.descr} top >
-				<span class="var-name">{item.alias}</span>
+			<SvelteTooltip tip={item.name} top >
+				<span class="var-name">{item.descr}</span>
 			</SvelteTooltip>
 			<input 
 				type=range 
@@ -147,7 +147,7 @@
 		{/each}
 	</div>
 
-	<div class="ctrl-group">
+	<!-- <div class="ctrl-group">
 		<div class="ctrl-name">Group sizes</div>
 		{#each groupSizes as item, i}
 			<div class="date">
@@ -167,7 +167,7 @@
 			</SvelteTooltip>
 			</div>
 		{/each}
-	</div>
+	</div> -->
 
 	<!-- <SvelteTooltip tip="view on github" top >
 			<button>Click me</button>
@@ -208,6 +208,7 @@
 		justify-content: flex-start;
 		flex: 1;
 		margin: 0;
+		min-width: 44px;
 	} 
 
 	span {
@@ -225,6 +226,7 @@
 		flex: 1;
 		text-align: right;
 		display: flex;
+		justify-content: flex-end;
 	}
 
 	.date-small {

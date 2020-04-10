@@ -111,13 +111,37 @@ export let params2 = [
       "max" : 1,
       "unit": "share",
       "apiRequest" : true
+    },
+    {
+      "descr": "Fraction of individuals with asymptomatic course",
+      "name": "p_asy",
+      "alias": "p_asy",
+      "min" : 0,
+      "max" : 1,
+      "unit": "share"
+    },
+    {
+      "descr": "Fraction of individuals hospitalized / severe course",
+      "name": "p_sev_rec",
+      "alias": "p_sev_rec",
+      "min" : 0,
+      "max" : 1,
+      "unit": "share"
+    },
+    {
+      "descr": "Mortality rate",
+      "name": "p_sev_dec",
+      "alias": "p_sev_dec",
+      "min" : 0,
+      "max" : 1,
+      "unit": "share"
     }
   ]
 },
 {
   "Incubation": [
     {
-      "descr": "Non-infectious incubation period",
+      "descr": "Non-infectious incub. period",
       "name": "t_e_inc",
       "alias": "t_e_inc",
       "min" : 0.01,
@@ -125,7 +149,7 @@ export let params2 = [
       "unit": "days"
     },
     {
-      "descr": "Infectious incubation period",
+      "descr": "Infectious incub. period",
       "name": "t_i_inc",
       "alias": "t_i_inc",
       "min" : 0.01,
@@ -180,30 +204,7 @@ export let params2 = [
 },
 {
   "Group sizes" : [
-    {
-      "descr": "Fraction of individuals with asymptomatic course",
-      "name": "p_asy",
-      "alias": "p_asy",
-      "min" : 0,
-      "max" : 1,
-      "unit": "share"
-    },
-    {
-      "descr": "Fraction of individuals hospitalized / severe course",
-      "name": "p_sev_rec",
-      "alias": "p_sev_rec",
-      "min" : 0,
-      "max" : 1,
-      "unit": "share"
-    },
-    {
-      "descr": "Mortality rate",
-      "name": "p_sev_dec",
-      "alias": "p_sev_dec",
-      "min" : 0,
-      "max" : 1,
-      "unit": "share"
-    }
+    
   ]
 }
 ]
