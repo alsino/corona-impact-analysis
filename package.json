@@ -24,7 +24,7 @@
     "axios": "^0.19.2",
     "c3": "^0.7.15",
     "d3": "^5.15.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-css-only": "^2.0.0",
     "rollup-plugin-json": "^4.0.0",
